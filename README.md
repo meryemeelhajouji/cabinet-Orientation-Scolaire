@@ -1,4 +1,4 @@
-# Projet-File-Rouge
+﻿# Projet-File-Rouge
 
 Définition du projet
 
@@ -19,5 +19,5 @@ Gréer les l’écoles (Ajouter, Modifier, Supprimer)
 Pour un visiteur :
 •    Trouver des informations sur les différentes formations de l’enseignement supérieur 
 •    Trouver des écoles en différentes spécialité
-•    Si l’étudient ne sait pas vos choix   nous propose de passe un test d’orientation à partir la résultat en s’afficher les choix des fillers qui vous correspondent 
+•  Si l’étudient ne sait pas vos choix   nous propose de passe un test d’orientation à partir la résultat en s’afficher les choix des fillers qui vous correspondent 
 
