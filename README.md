@@ -16,11 +16,19 @@ Les fonctionnalités
 
 Pour un admin :
 
-Gréer les utilisateurs (Ajouter, Modifier, Supprimer)  
+1.	Un Administrateur peut : crée les étudiants (numéro, Nom complet).
+2.	 Un Administrateur peut : crée les Spécialités (numéro, Nom complet, description, leurs formations, leurs établissements, leur métier).
+3.	Un Administrateur peut : crée les formations (numéro, Nom complet, lien, logo, ville).
+4.	Un Administrateur peut : crée les établissements (numéro, Nom complet, lien, logo, ville).
+5.	Un Administrateur peut : crée les Diplômes (numéro, Nom complet, Spécialités , ville, nombre année, établissements )
+6.	Un Administrateur peut : : crée les administrateurs (Matricule, Nom, Prénom, Rôle, Mot de Passe).
 
-Gréer les formations, les spécialités et les filière   (Ajouter, Modifier, Supprimer)  
 
-Gréer les l’écoles (Ajouter, Modifier, Supprimer)  
+Gréer les étudiants (Ajouter, Modifier, Supprimer)
+Gréer les formations (Ajouter, Modifier, Supprimer)
+Gréer les établissements (Ajouter, Modifier, Supprimer)
+Gréer les établissements (Ajouter, Modifier, Supprimer)
+
 
 
 Pour un visiteur :
