@@ -2,59 +2,60 @@
 
 Définition du projet
 
-MonParcour est un site web nationale des lycéens ou étudiants en recherche d’une orientation pour s’inscrire en première année de l’enseignement supérieur en Maroc.
+MonParcour est un site web de cabinet d’orientation scolaire des lycéens ou étudiant à la recherche d’une orientation pour s’inscrire en première année de l’enseignement supérieur en Maroc.
+Problématique :
+•	Le cabinet MonParcour n’est pas connu par les étudiants qui cherchent de l’orientation.
+•	Problème de suive chaque étudiant et de connaitre les qui assigne a chaque charge d’orientions
+•	Le cabinet avis problème d’organiser la séance entre étudiant et charge d’orientation  
 
-L’objectif est de :
+Solution :
+•	Site web MonParcour va faciliter la procédure d’orientation.
+•	Améliorer la relation avec les clients.
+•	Présenter les informations et les services de votre cabinet.
+•	créer un lien direct avec vos clients, pour pose leur opinion.
+•	Le site va également représenter un canal de publicité de cette activité et la rendre plus populaire.
 
-•	Défini son parcours à partir d’un quiz d’orientation
+Les fonctionnalités 
+Pour un étudiant :
+•	Visite le site pour voir les information à-propos le cabinet d’orientation scolaire MonParcour les offres et les services
+•	Etudiant peut passer un test d’orientation free pour obtenir des informations sur les filières les spécialités et les métiers intéressent à partir votre réponse.
+•	Etudiant réserver un rendez-vous pour un séance d’orientation après inscription et pour confirme le rendez-vous étudiant doit confirmer un email qui recevoir 
+•	Etudiant peut contacte nous pour pose leur question ou bien pose leur opinion. 
+ Pour un charge d’orientation :
+•	Gestion de test :
+1.	Voir les étudiant qui passe le test par le nom et la date 
+2.	Voir résultat de test de chaque étudiant et le nombre de fois passe le test.
 
-•	Trouve des formations qui se correspondent 
+•	Gestion d’étudiant :
+1.	Voir étudiant qui l’assigne par la admin. 
+2.	Modifier étudiant 
+Pour admin :
+•	Gestion des étudiants :
+1.	Voir la List des étudiant (nom, prénom, email, phone, adresse, mot de passe, confirmation, orientation).
+2.	Supprimer étudiant
+3.	Modifier étudiant 
+4.	Confirme étudiant
 
-•	Propose les écoles adapter à son choix
+•	Gestion des rendez-vous
 
-Les fonctionnalités
+1.	Voir la List de rendez-vous et envoyer un message de confirmation après la confirmation d’étudiant l’admin est assigne le rendez-vous a un charge d’orientation. (Tableau orientation « nom étudiant, confirmation, l’enseignement, date d’orientation).   
+2.	Supprimer rendez-vous
+3.	Modifier rendez-vous
+4.	Confirme-rendez-vous
+5.	Ajoute un rendez-vous
 
-Pour un admin :
-
-1.	Un Administrateur peut : crée les étudiants (numéro, Nom complet).
-2.	 Un Administrateur peut : crée les Spécialités (numéro, Nom complet, description, leurs formations, leurs établissements, leur métier).
-3.	Un Administrateur peut : crée les formations (numéro, Nom complet, lien, logo, ville).
-4.	Un Administrateur peut : crée les établissements (numéro, Nom complet, lien, logo, ville).
-5.	Un Administrateur peut : crée les Diplômes (numéro, Nom complet, Spécialités , ville, nombre année, établissements )
-6.	Un Administrateur peut : : crée les administrateurs (Matricule, Nom, Prénom, Rôle, Mot de Passe).
-
-
-Gréer les étudiants (Ajouter, Modifier, Supprimer)
-Gréer les formations (Ajouter, Modifier, Supprimer)
-Gréer les établissements (Ajouter, Modifier, Supprimer)
-Gréer les établissements (Ajouter, Modifier, Supprimer)
-
-
-
-Pour un visiteur :
-
-•	Trouver des informations sur les différentes formations de l’enseignement supérieur 
-
-•	Trouver des écoles en différentes spécialité
-
-•	Si l’étudient ne sait pas vos choix   nous propose de passe un test d’orientation à partir le résultat en s’afficher les choix des spécialités qui vous correspondent 
-
-•	Autant que étudiant tu peux faire une recherche sur les filières 
-
-
-
-
-
-
-
-
-
-
-
+•	Gestion des charges d’orientation
+1.	Voir la List rendez-vous (nom, prénom, email, phone, adresse, type…)
+2.	Supprimer rendez-vous
+3.	Modifier rendez-vous 
+4.	Ajoute un rendez-vous
 
 
-
-
+•	Gestion des user
+1.	Supprimer 
+2.	Modifier 
+3.	Ajoute un 
+4.	Consulte 
 
 
 
