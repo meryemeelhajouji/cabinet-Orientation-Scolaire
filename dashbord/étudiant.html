@@ -4,72 +4,73 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
-    <title>Page Students</title>
+    <title>Dashboard</title>
 </head>
 
-<body>
+<body> 
     <main>
           <div class="d-flex" id="dashboard">
-        <div class="bg" id="sidebar-dashboard">
-            <div class=" m-2 dark-text fs-5 fw-bold border-start border-5 border-info px-2">
-                E-classe</div>
-            <div class="list-group ">
-                <img src="image/profile.jpg" alt="profile picture"
-                    class=" profile img-fluid rounded-circle mx-auto d-block my-2 p-1 ">
-                <div class="text-center ">
-                    <h6> Admin name </h6>
-                    <span class=" fs-6 text-info">Admin</span>
-                </div>
-                <a href="dashboard.html" class="list-group-item mx-5 border-0    bg-transparent mt-3">
-                    <i class="fas fa-home"></i> Home</a>
-                <a href="#" class="list-group-item mx-5 border-0  bg-transparent">
-                    <i class="far fa-bookmark"></i> Course </a>
-                <a href="students.html" class="list-group-item mx-5 border-0  bg-info rounded-3">
-                    <i class="fas fa-graduation-cap"></i> Students</a>
-                <a href="payment.html" class="list-group-item mx-5 border-0  bg-transparent">
-                    <i class="fas fa-dollar-sign"></i> Payment </a>
-                <a href="#" class="list-group-item mx-5 border-0  bg-transparent">
-                    <i class="far fa-file-alt"></i> Report </a>
-                <a href="#" class="list-group-item mx-5 border-0  bg-transparent">
-                    <i class="fas fa-sliders-h"></i> Settings</a>
-                <a href="index.html" class="list-group-item mx-5 border-0  bg-transparent mt-5 mb-2  ">
+        <div class="bg  " id="sidebar-dashboard">
+           <a href="index.html" class="logo my-3   d-flex align-items-center">
+        <img src="img/logo.png" alt="">
+        <span> <spam style="color: #e44aec;">Mon</spam>Parcour</span>
+      </a><hr class="mb-3 ">
+            <div class="list-group  d-flex ">
+               
+                <a href="dashboard.html" class="list-group-item mx-2 p-2 border-0 my-2  rounded-3  fw-bold  fs-6  " style="background:#DD10C9 ;">
+                   <img src="./img/home.png" > Accueil</a> 
+                <a href="#" class="list-group-item mx-2 fw-bold border-0 bg-transparent p-2">
+                    <img src="./img/test.png" >Test </a>
+               <a href="étudiant.html" class="list-group-item mx-2 p-2 fw-bold  fs-6  border-0 bg-transparent my-2   ">
+                <img src="./img/graduate-cap.png" >Etudiants</a>
+                <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent my-2 p-2 ">
+                    <img src="./img/user.png" >Charges d'orientation </a>
+                    <a href="#" class="list-group-item mx-2 fw-bold  fs-6 border-0 my-2  rounded-3 p-2 " >
+                       <img src="./img/booking.png" >Réservation</a> 
+                        <a href="#" class="list-group-item mx-2 fw-bold  fs-6 border-0 my-2  rounded-3 p-2  " >
+                            <img src="./img/message.png" > Messages</a> 
+                <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent my-2 p-2 ">
+                    <img src="./img/user.png" >Utilisateurs </a>
+                    <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
+                        <img src="./img/settings (1).png" > Settings</a>
+                <a href="index.html" class="list-group-item mx-5 border-0 fw-bold  fs-6  bg-transparent  mt-5 mb-2 ">
                     Logout <i class="fas fa-sign-out-alt"></i> </a>
-            </div>
-        </div>
-        <div id="page-content-dashboard">
-            <!-- Start navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light  py-1 px-4">
-                <div class="d-flex align-items-center">
-                    <i class="fas fa-chevron-circle-left me-3" id="menu-toggle"></i>
+           
+               </ul> 
                 </div>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
-                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarToggler">
-                    <div class="navbar-nav ms-auto ">
-                        <div class="nav-item dropdown">
+        </div>
+        <div id="page-content-dashboard" class="bt" >
+            <nav class="navbar navbar-expand-lg   py-1 px-4 cont ">
+                <div class="d-flex align-items-center">
+                   
+                    <i class="fa fa-bars me-3 " id="menu-toggle"></i>
+                   <h5>Accueil</h5> 
+                </div>
+        
+              
+                    <div class="navbar-nav ms-auto">
+                        <div class="nav-item ">
                             <form class="d-flex  justify-content-end mt-3 ">
                                 <input class="form-control me-2 " type="search" placeholder="Search..."
                                     aria-label="Search">
-                                <i class="fas fa-bell mt-2 ml-2"></i>
+                                    <a href="./profile.html"class="mx-3 " > <img src="./img/user (1).png" class="mx-3 w-75" ></a>
+                               
                             </form>
                         </div>
                     </div>
-                </div>
+               
             </nav>
-            <div class="container-fluid bg-light  px-4">
+            <div class="container-fluid px-4">
                 <div class="row ">
                     <div class=" d-flex justify-content-between my-3">
-                        <h1 class="fs-4 ">Students List</h1>
+                        <h1 class="fs-4 ">Liste des étudiant</h1>
                         <div>
-                            <i class="fas fa-sort mx-3 text-info "></i>
-                            <button type="button" class="btn btn-info text-white  ">ADD NEW STUDENT</button>
+                            <i class="fas fa-sort mx-3  "></i>
+                            <a href="./ajouterEtudiant.html"> <button type="button"  class="btn fw-bold  fs-6" style="background:#DD10C9 ; color: #012970;">Ajouter un étudiant</button></a>
                         </div>
                     </div>
                     <div class=" table-responsive-sm table-responsive-md">
@@ -77,10 +78,10 @@
                             <thead>
                                 <tr>
                                     <th> </th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Enroll Number</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Adresse</th>
+                                    <th>Téle</th>
                                     <th>Date of admission</th>
                                     <th></th>
                                     <th></th>
@@ -174,6 +175,8 @@
             </div>
         </div>
     </div>
+
+     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var el = document.getElementById("dashboard");
