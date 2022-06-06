@@ -25,8 +25,7 @@ for(let k = 0; k < 24; k++){
 }
 let affichage = () => {
     score.textContent = i+1
-    // 100/nbrQestion * i+1 . ''
-    bar.style.width = `${4.17 * (i+1)}%`;
+    bar.style.width = `${100/2 * (i)}%`;
     (i == 0) ? precedent.setAttribute('disabled', ''): precedent.removeAttribute('disabled');
     question.textContent = questions[i].question
     if(questions[i].type == "multichoix"){
