@@ -1,6 +1,6 @@
 <?php
-  $data = new UsersController();
-  $users = $data->getAllusers();
+  $data = new chargeController();
+  $users = $data->getAllCharge();
 ?>
 
 <!DOCTYPE html>
