@@ -16,10 +16,7 @@ class ClientController{
          return $hotel->getAllData();
   }
 // ---------------------------
-  Public function getallcommentair(){
-    $hotel=new Client();
-         return $hotel->getcommentair();
-  }
+
   // ---------------------------------------
   public function InsertContact(){
     $Contact = new contact();

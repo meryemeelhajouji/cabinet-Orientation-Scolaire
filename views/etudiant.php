@@ -1,3 +1,8 @@
+<?php
+  $data = new UsersController();
+  $users = $data->getAllusers();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,92 +95,24 @@
                                         <th>Prénom</th>
                                         <th>Adresse</th>
                                         <th>Téle</th>
-                                        <th>Date of admission</th>
+                                        <th>email</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <?php foreach($users as $users): ?>
                                     <tr>
-                                        <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                        <td>username</td>
-                                        <td>user@email.com</td>
-                                        <td>7305477760</td>
-                                        <td>1234567305477760</td>
-                                        <td>08-Dec, 2021</td>
+                                        
+                                        <td><?php echo $users['nom'] ?></td>
+                                        <td><?php echo $users['prenom'] ?></td>
+                                        <td><?php echo $users['email'] ?></td>
+                                        <td><?php echo $users['adresse'] ?></td>
+                                        <td><?php echo $users['tele'] ?></td>
                                         <td> <i class="fas fa-pen mx-4 "></i></td>
                                         <td> <i class="fas fa-trash  "></i></td>
                                     </tr>
-                                    <tr>
-                                        <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                        <td>username</td>
-                                        <td>user@email.com</td>
-                                        <td>7305477760</td>
-                                        <td>1234567305477760</td>
-                                        <td>08-Dec, 2021</td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                        <td>username</td>
-                                        <td>user@email.com</td>
-                                        <td>7305477760</td>
-                                        <td>1234567305477760</td>
-                                        <td>08-Dec, 2021</td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                        <td>username</td>
-                                        <td>user@email.com</td>
-                                        <td>7305477760</td>
-                                        <td>1234567305477760</td>
-                                        <td>08-Dec, 2021</td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                        <td>username</td>
-                                        <td>user@email.com</td>
-                                        <td>7305477760</td>
-                                        <td>1234567305477760</td>
-                                        <td>08-Dec, 2021</td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                        <td>username</td>
-                                        <td>user@email.com</td>
-                                        <td>7305477760</td>
-                                        <td>1234567305477760</td>
-                                        <td>08-Dec, 2021</td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                        <td>username</td>
-                                        <td>user@email.com</td>
-                                        <td>7305477760</td>
-                                        <td>1234567305477760</td>
-                                        <td>08-Dec, 2021</td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                        <td>username</td>
-                                        <td>user@email.com</td>
-                                        <td>7305477760</td>
-                                        <td>1234567305477760</td>
-                                        <td>08-Dec, 2021</td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
-                                    </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
