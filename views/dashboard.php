@@ -36,7 +36,7 @@
                     <a href="etudiant"
                         class="list-group-item mx-2 p-2 fw-bold  fs-6  border-0 bg-transparent my-2   ">
                         <img src="views/img/graduate-cap.png">Etudiants</a>
-                    <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent my-2 p-2 ">
+                    <a href="chargeOrientation" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent my-2 p-2 ">
                         <img src="views/img/user.png">Charges d'orientation </a>
                     <a href="#" class="list-group-item mx-2 fw-bold  fs-6   border-0 my-2  rounded-3 p-2 ">
                         <img src="views/img/booking.png">Réservation</a>
