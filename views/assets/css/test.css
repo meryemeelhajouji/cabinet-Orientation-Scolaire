@@ -1,0 +1,47 @@
+
+.style_card {
+  border: #012970 5px solid;
+}
+
+p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+h5 {
+  font-family: var(--font-family);
+  color: var(--color_bleu2);
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.test {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border-radius: 4px;
+    color: #fff;
+    background: #DD10C9;
+    box-shadow: 0px 5px 30px rgb(65 84 241 / 40%);
+}
+#question{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(1, 41, 112);
+  }
+  form .btn{
+    background: #e44aec;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+
+
+
