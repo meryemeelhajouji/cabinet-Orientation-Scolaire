@@ -22,6 +22,6 @@ static public function add($data){
       }
      
       $stmt = null;
-    }
+}
 
 }?>

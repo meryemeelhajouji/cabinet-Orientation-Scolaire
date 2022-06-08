@@ -1,3 +1,8 @@
+
+<?php
+  $data = new adminController();
+  $users = $data->addAdmin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,34 +82,36 @@
                 </nav>
                 <div class="container-fluid px-4">
                     <div class="row ">
-                        <div class=" d-flex justify-content-between my-3">
-                            <h1 class="fs-4 ">Ajouter un étudiant</h1>
+                        <div class=" d-flex justify-content-between my-3 mx-4">
+                            <h1 class="fs-4 ">Ajouter un admin</h1>
                         </div>
                         <div>
                             <article class="entry">
                                 <div class="card bg-light shadow p-4">
-                                    <form action="forms/contact.php" method="post" class="php-email-form">
+                                    <form action="" method="post" class="php-email-form">
                                         <div class="row gy-4">
                   
                                           <div class="col-md-6">
-                                            <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                                            <input type="text" name="nom" class="form-control" placeholder="Votre nom" required>
                                           </div>
                   
-                                          <div class="col-md-6 ">
+                                          <div class="col-md-6">
                                             <input type="email" class="form-control" name="email" placeholder="Votre e-mail" required>
                                           </div>
                   
                                           <div class="col-md-12">
-                                            <input type="text" class="form-control" name="Téléphoner" placeholder="Téléphoner" required>
+                                            <input type="text" class="form-control" name="adresse" placeholder="adresse" required>
                                           </div>
                   
-                                          <div class="col-md-12">
-                                            <textarea class="form-control" name="message" rows="6" placeholder="Votre message"
-                                              required></textarea>
+                                          <div class="col-md-6">
+                                            <input type="text" class="form-control" name="tele" placeholder="Télephone" required>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <input type="text" class="form-control" name="password" placeholder="password" required>
                                           </div>
                   
                                           <div class="col-md-12 text-center">
-                                            <button type="submit" class="btn  w-25" style="background:#DD10C9 ; color: #012970; ">Modifier
+                                            <button type="submit" name="add" class="btn  w-25" style="background:#DD10C9 ; color: #012970; ">Ajouter
                                             </button>
                                           </div>
                   

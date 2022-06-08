@@ -82,7 +82,7 @@
                             <h1 class="fs-4 ">Liste d'admin</h1>
                             <div>
                                 <i class="fas fa-sort mx-3  "></i>
-                                <a href="./ajouterEtudiant"> <button type="button" class="btn fw-bold  fs-6"
+                                <a href="./ajouterAdmin"> <button type="button" class="btn fw-bold  fs-6"
                                         style="background:#DD10C9 ; color: #012970;">Ajouter un admin</button></a>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                                         <td><?php echo $users['email'] ?></td>
                                         <td><?php echo $users['adresse'] ?></td>
                                         <td><?php echo $users['tele'] ?></td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
+                                        <td> <a href="editeAdmin ?id=<?php echo $users['id_user ']; ?>"  > <i class="fas fa-pen mx-4 "></i></a></td>
                                         <td> <i class="fas fa-trash  "></i></td>
                                     </tr>
                                     <?php endforeach; ?>

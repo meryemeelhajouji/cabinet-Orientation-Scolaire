@@ -8,7 +8,7 @@ include ('./views/includes/navbar.php');
 }
 
 $home =new HomeController();
-$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterEtudiant','profile','chargeOrientation','etudiant','logout'];
+$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin'];
 
 if(isset($_GET['page'])){
     if(in_array($_GET['page'],$page)){

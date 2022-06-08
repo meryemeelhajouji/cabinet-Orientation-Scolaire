@@ -92,7 +92,7 @@
                                     <tr>
                                         <th> </th>
                                         <th>Nom</th>
-                                        <th>Prénom</th>
+                                        <th>email</th>
                                         <th>Adresse</th>
                                         <th>Téle</th>
                                         <th>email</th>
@@ -103,9 +103,8 @@
                                 <tbody>
                                 <?php foreach($etudiant as $etudiant): ?>
                                     <tr>   
-                                        
+                                        <td>
                                         <td><?php echo $etudiant['nom'] ?></td>
-                                        <td><?php echo $etudiant['prenom'] ?></td>
                                         <td><?php echo $etudiant['email'] ?></td>
                                         <td><?php echo $etudiant['adresse'] ?></td>
                                         <td><?php echo $etudiant['tele'] ?></td>

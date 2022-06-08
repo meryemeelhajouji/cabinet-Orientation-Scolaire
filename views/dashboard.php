@@ -4,6 +4,8 @@ $newuser = new utilisateurController();
 if(!isset($_SESSION['nom'])){
   header("location: login");
  }
+ $data = new EtudiantController();
+ $etudiant = $data->getAlletudiant();
 
 ?>
 <!DOCTYPE html>
@@ -73,8 +75,8 @@ if(!isset($_SESSION['nom'])){
                     <div class="navbar-nav ms-auto">
                         <div class="nav-item ">
                             <form class="d-flex  justify-content-end mt-3 ">
-                                <div>
-                                    <p>Bonjour : </p>
+                                <div class="fw-bold fs-4 m-3 ">
+                                    <h5>Bonjour : <span><?php  echo $_SESSION['nom'];  ?> </span></h5>
                                 </div>
                                     
                                 <a href="./profile" class="mx-3 "> <img src="views/img/user (1).png"
@@ -136,100 +138,32 @@ if(!isset($_SESSION['nom'])){
                             <div class=" table-responsive-sm table-responsive-md">
                                 <table
                                     class="table bg-white rounded shadow-sm align-middle overflow-scroll  table-hover">
+                                  
                                     <thead>
-                                        <tr>
-                                            <th> </th>
-                                            <th>Nom</th>
-                                            <th>Prénom</th>
-                                            <th>Adresse</th>
-                                            <th>Téle</th>
-                                            <th>Date of admission</th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                            <td>username</td>
-                                            <td>user@email.com</td>
-                                            <td>7305477760</td>
-                                            <td>1234567305477760</td>
-                                            <td>08-Dec, 2021</td>
-                                            <td> <i class="fas fa-pen mx-4 "></i></td>
-                                            <td> <i class="fas fa-trash  "></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                            <td>username</td>
-                                            <td>user@email.com</td>
-                                            <td>7305477760</td>
-                                            <td>1234567305477760</td>
-                                            <td>08-Dec, 2021</td>
-                                            <td> <i class="fas fa-pen mx-4 "></i></td>
-                                            <td> <i class="fas fa-trash  "></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                            <td>username</td>
-                                            <td>user@email.com</td>
-                                            <td>7305477760</td>
-                                            <td>1234567305477760</td>
-                                            <td>08-Dec, 2021</td>
-                                            <td> <i class="fas fa-pen mx-4 "></i></td>
-                                            <td> <i class="fas fa-trash  "></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                            <td>username</td>
-                                            <td>user@email.com</td>
-                                            <td>7305477760</td>
-                                            <td>1234567305477760</td>
-                                            <td>08-Dec, 2021</td>
-                                            <td> <i class="fas fa-pen mx-4 "></i></td>
-                                            <td> <i class="fas fa-trash  "></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                            <td>username</td>
-                                            <td>user@email.com</td>
-                                            <td>7305477760</td>
-                                            <td>1234567305477760</td>
-                                            <td>08-Dec, 2021</td>
-                                            <td> <i class="fas fa-pen mx-4 "></i></td>
-                                            <td> <i class="fas fa-trash  "></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                            <td>username</td>
-                                            <td>user@email.com</td>
-                                            <td>7305477760</td>
-                                            <td>1234567305477760</td>
-                                            <td>08-Dec, 2021</td>
-                                            <td> <i class="fas fa-pen mx-4 "></i></td>
-                                            <td> <i class="fas fa-trash  "></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                            <td>username</td>
-                                            <td>user@email.com</td>
-                                            <td>7305477760</td>
-                                            <td>1234567305477760</td>
-                                            <td>08-Dec, 2021</td>
-                                            <td> <i class="fas fa-pen mx-4 "></i></td>
-                                            <td> <i class="fas fa-trash  "></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td> <img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                            <td>username</td>
-                                            <td>user@email.com</td>
-                                            <td>7305477760</td>
-                                            <td>1234567305477760</td>
-                                            <td>08-Dec, 2021</td>
-                                            <td> <i class="fas fa-pen mx-4 "></i></td>
-                                            <td> <i class="fas fa-trash  "></i></td>
-                                        </tr>
-                                    </tbody>
+                                    <tr>
+                                        <th> </th>
+                                        <th>Nom</th>
+                                        <th>email</th>
+                                        <th>Adresse</th>
+                                        <th>Téle</th>
+                                        <th>email</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach($etudiant as $etudiant): ?>
+                                    <tr>   
+                                        <td>
+                                        <td><?php echo $etudiant['nom'] ?></td>
+                                        <td><?php echo $etudiant['email'] ?></td>
+                                        <td><?php echo $etudiant['adresse'] ?></td>
+                                        <td><?php echo $etudiant['tele'] ?></td>
+                                        <td> <i class="fas fa-pen mx-4 "></i></td>
+                                        <td> <i class="fas fa-trash  "></i></td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
                                 </table>
                             </div>
                         </div>
