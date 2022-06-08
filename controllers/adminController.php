@@ -1,10 +1,10 @@
 <?php
 
-class UsersController{
+class adminController{
 
     public function getAllusers(){
         
-        $users = users::getAll();
+        $users = admin::getAll();
         return $users; 
     }
 }?>

@@ -1,7 +1,8 @@
 
 <?php
-  if(isset($_POST['inscrire'])){
-    $newetudiant = new EtudiantController();
+  if(isset($_POST['login'])){
+    $newuser = new utilisateurController();
+    $users = $newuser->login();
    
    }
 ?>
@@ -86,7 +87,7 @@
 
           <div class="mb-4">
             <input type="text" class="form-control  p-3 fw-bold " style="background: #f5f5f5 ;" id="email"
-              name="email_user" value="" placeholder="  Email">
+              name="email" value="" placeholder="  Email">
 
           </div>
           <div class="mb-4">
@@ -100,7 +101,7 @@
           <a class=" text-decoration-underline ms-5  " style="color: #012970;" href="#"> <span>Mot de passe
               oublié?</span></a>
 
-          <button type="submit" class="btn   w-100 text-white text-uppercase  mt-5 " name="inscrire">
+          <button type="submit" class="btn w-100 text-white text-uppercase  mt-5 " name="login">
             Connexion
           </button>
           <div class="mt-3 text-center">

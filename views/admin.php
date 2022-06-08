@@ -1,5 +1,5 @@
 <?php
-  $data = new UsersController();
+  $data = new adminController();
   $users = $data->getAllusers();
 ?>
 
