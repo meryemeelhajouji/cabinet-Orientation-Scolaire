@@ -3,7 +3,9 @@
   if(isset($_POST['login'])){
     $newuser = new utilisateurController();
     $users = $newuser->login();
-   
+    if(isset($_SESSION['nom'])){
+      header("location: dashboard");
+  }
    }
 ?>
 
