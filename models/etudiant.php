@@ -9,15 +9,19 @@ static public function getAlletudiant(){
 }
 
 static public function add($data){
-    $stmt = DB::connect()->prepare('INSERT INTO `utilisateur`(nom,email,password,role,confirmePassword) VALUES (:nom,:email,:password,:confirmePassword,:role)');
+    $stmt = DB::connect()->prepare('INSERT INTO `utilisateur`(nom,email,password,role) VALUES (:nom,:email,:password,:role)');
     $stmt->bindParam(':nom',   $data['nom']);
     $stmt->bindParam(':email',  $data['email']);
     $stmt->bindParam(':password',    $data['password']);
-    $stmt->bindParam(':confirmePassword',$data['confirmePassword']);
-    $stmt->bindParam(':role',  $data['role']);
-    $stmt->execute();
-      
-      
-}
+    $stmt->bindParam(':role',  $data['role']); 
+    if($stmt->execute()){
+        return 'User is created successfully';
+      }
+      else{
+        return 'User was not created successfully';
+      }
+     
+      $stmt = null;
+    }
 
 }?>

@@ -17,7 +17,6 @@ class EtudiantController{
                 'nom'   => $_POST['nom'],
                 'email'    => $_POST['email'],
                 'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-                'confirmePassword' => $_POST['confirmePassword'],
                 'role'   => "etudiant",
             );
             
