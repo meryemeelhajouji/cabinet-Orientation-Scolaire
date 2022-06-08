@@ -1,6 +1,6 @@
 <?php
-  $data = new UsersController();
-  $users = $data->getAllusers();
+  $data = new EtudiantController();
+  $etudiant = $data->getAlletudiant();
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
                         <img src="views/img/home.png"> Accueil</a>
                     <a href="#" class="list-group-item mx-2 fw-bold border-0 bg-transparent p-2">
                         <img src="views/img/test.png">Test </a>
-                    <a href=""
+                    <a href="etudiant"
                         class="list-group-item mx-2 p-2 fw-bold  fs-6  border-0 bg-transparent my-2   ">
                         <img src="views/img/graduate-cap.png">Etudiants</a>
                     <a href="chargeOrientation" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent my-2 p-2 ">
@@ -49,7 +49,7 @@
                         <img src="views/img/message.png"> Messages</a>
                     <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/user.png">Utilisateurs </a>
-                    <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
+                    <a href="admin" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/settings (1).png"> Settings</a>
                     <a href="index.html"
                         class="list-group-item mx-5 border-0 fw-bold  fs-6  bg-transparent  mt-5 mb-2 ">
@@ -101,14 +101,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach($users as $users): ?>
+                                <?php foreach($etudiant as $etudiant): ?>
                                     <tr>   
                                         
-                                        <td><?php echo $users['nom'] ?></td>
-                                        <td><?php echo $users['prenom'] ?></td>
-                                        <td><?php echo $users['email'] ?></td>
-                                        <td><?php echo $users['adresse'] ?></td>
-                                        <td><?php echo $users['tele'] ?></td>
+                                        <td><?php echo $etudiant['nom'] ?></td>
+                                        <td><?php echo $etudiant['prenom'] ?></td>
+                                        <td><?php echo $etudiant['email'] ?></td>
+                                        <td><?php echo $etudiant['adresse'] ?></td>
+                                        <td><?php echo $etudiant['tele'] ?></td>
                                         <td> <i class="fas fa-pen mx-4 "></i></td>
                                         <td> <i class="fas fa-trash  "></i></td>
                                     </tr>

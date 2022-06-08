@@ -1,6 +1,6 @@
 <?php
-  $data = new chargeController();
-  $charge = $data->getAllCharge();
+  $data = new UsersController();
+  $users = $data->getAllusers();
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +49,7 @@
                         <img src="views/img/message.png"> Messages</a>
                     <a href="admin" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/user.png">Utilisateurs </a>
-                    <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
+                    <a href="admin" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/settings (1).png"> Settings</a>
                     <a href="index.html"
                         class="list-group-item mx-5 border-0 fw-bold  fs-6  bg-transparent  mt-5 mb-2 ">
@@ -79,11 +79,11 @@
                 </nav>
                     <div class="row ">
                         <div class=" d-flex justify-content-between my-3">
-                            <h1 class="fs-4 ">Liste des charges d'orientation</h1>
+                            <h1 class="fs-4 ">Liste d'admin</h1>
                             <div>
                                 <i class="fas fa-sort mx-3  "></i>
                                 <a href="./ajouterEtudiant"> <button type="button" class="btn fw-bold  fs-6"
-                                        style="background:#DD10C9 ; color: #012970;">Ajouter un charge</button></a>
+                                        style="background:#DD10C9 ; color: #012970;">Ajouter un admin</button></a>
                             </div>
                         </div>
                         <div class=" table-responsive-sm table-responsive-md">
@@ -101,14 +101,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach($charge as $charge): ?>
+                                <?php foreach($users as $users): ?>
                                     <tr>   
                                         
-                                        <td><?php echo $charge['nom'] ?></td>
-                                        <td><?php echo $charge['prenom'] ?></td>
-                                        <td><?php echo $charge['email'] ?></td>
-                                        <td><?php echo $charge['adresse'] ?></td>
-                                        <td><?php echo $charge['tele'] ?></td>
+                                        <td><?php echo $users['nom'] ?></td>
+                                        <td><?php echo $users['prenom'] ?></td>
+                                        <td><?php echo $users['email'] ?></td>
+                                        <td><?php echo $users['adresse'] ?></td>
+                                        <td><?php echo $users['tele'] ?></td>
                                         <td> <i class="fas fa-pen mx-4 "></i></td>
                                         <td> <i class="fas fa-trash  "></i></td>
                                     </tr>

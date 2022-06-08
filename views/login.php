@@ -1,3 +1,11 @@
+
+<?php
+  if(isset($_POST['inscrire'])){
+    $newetudiant = new EtudiantController();
+   
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +100,7 @@
           <a class=" text-decoration-underline ms-5  " style="color: #012970;" href="#"> <span>Mot de passe
               oublié?</span></a>
 
-          <button type="submit" class="btn   w-100 text-white text-uppercase  mt-5 " name="login">
+          <button type="submit" class="btn   w-100 text-white text-uppercase  mt-5 " name="inscrire">
             Connexion
           </button>
           <div class="mt-3 text-center">

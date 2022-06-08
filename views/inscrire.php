@@ -1,3 +1,11 @@
+
+<?php
+  if(isset($_POST['inscrire'])){
+    $newParent = new EtudiantController();
+    $newParent->addEtudiants();
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +77,7 @@
 
 
         <div class=" text-center mt-5  mb-5">
-          <h1 class=" fs-3 fw-bold m-5 pb-3 " style="border-bottom: #DD10C9 3px solid;">login </h1>
+          <h1 class=" fs-3 fw-bold m-5 pb-3 " style="border-bottom: #DD10C9 3px solid;">S'inscrire </h1>
         </div>
 
 
@@ -78,12 +86,12 @@
 
 <div class="mb-4">
   <input type="text" class="form-control  p-3 fw-bold " style="background: #f5f5f5 ;" id="email"
-    name="email_user" value="" placeholder="  Email">
+    name="email" value="" placeholder="  Email">
 
 </div>
 <div class="mb-4">
   <input type="text" class="form-control p-3  fw-bold " id="password" style="background: #f5f5f5 ;"
-    name="password" value="" placeholder="Nom d'utilisateur " id="exampleInputPassword1">
+    name="nom" value="" placeholder="Nom d'utilisateur " id="exampleInputPassword1">
 
 </div>
 <div class="mb-4">
@@ -93,15 +101,15 @@
 </div>
 <div class="mb-4">
   <input type="password" class="form-control p-3  fw-bold " id="password" style="background: #f5f5f5 ;"
-    name="password" value="" placeholder="Confirmé mot de passe" id="exampleInputPassword1">
+    name="confirmePassword" value="" placeholder="Confirmé mot de passe" id="exampleInputPassword1">
 
 </div>
-<button type="submit" class="btn   w-100 text-white text-uppercase  mt-3 " name="login">
-  Connexion
+<button type="submit" class="btn   w-100 text-white text-uppercase  mt-3 " name="inscrire">
+  S'inscrire
 </button>
 <div class="mt-3 text-center">
 
-  <a class=" text-decoration-underline" style="color: #012970;" href="login.html"> <span>Login</span></a>
+  <a class=" text-decoration-underline" style="color: #012970;" href="login"> <span>Login</span></a>
 </div>
 </form>
       </div>
