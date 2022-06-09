@@ -3,13 +3,13 @@
 require_once('./autoload.php');
 require_once('./controllers/HomeController.php');
 require_once('./views/includes/alerts.php');
-if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_URI'])=="formReserver"||basename($_SERVER['REQUEST_URI'])=="Questionnaire"||basename($_SERVER['REQUEST_URI'])=="test"){
+if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_URI'])=="Questionnaire"||basename($_SERVER['REQUEST_URI'])=="test"){
 include ('./views/includes/navbar.php');
 }
 
 
 $home =new HomeController();
-$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin','AcueilleEtudiant'];
+$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin','AcueilleEtudiant','profileEtudiant'];
 
 if(isset($_GET['page'])){
     if(in_array($_GET['page'],$page)){
@@ -22,7 +22,7 @@ if(isset($_GET['page'])){
     }
 
 
-    if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_URI'])=="formReserver"||basename($_SERVER['REQUEST_URI'])=="inscrire"||basename($_SERVER['REQUEST_URI'])=="login"||basename($_SERVER['REQUEST_URI'])=="Questionnaire"||basename($_SERVER['REQUEST_URI'])=="test"){
+    if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_URI'])=="inscrire"||basename($_SERVER['REQUEST_URI'])=="login"||basename($_SERVER['REQUEST_URI'])=="Questionnaire"||basename($_SERVER['REQUEST_URI'])=="test"){
         include ('./views/includes/footer.php');}
 
 

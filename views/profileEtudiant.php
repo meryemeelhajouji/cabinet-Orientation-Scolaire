@@ -1,11 +1,4 @@
 
-<?php
-  if(isset($_POST['login'])){
-    $newuser = new utilisateurController();
-    $users = $newuser->login();
-  
-   }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,12 +39,22 @@
           <li><a class="nav-link scrollto" href="Acueille">Services</a></li>
           <li><a class="nav-link scrollto" href="Acueille">offer</a></li>
           <li><a class="nav-link scrollto" href="Acueille">Equipre</a></li>
-          <li><a class="nav-link scrollto" href="login">Réserve</a></li>
           <li><a class="nav-link scrollto " href="test">Test d'orientation</a></li>
+          <li><a class="nav-link scrollto" href="formReserver">Réserve</a></li>
 
-          <li><a class="nav-link scrollto" href="Acueille">Contact</a></li>
-          <li><a class="getstarted scrollto" href="login">Login</a></li>
-        </ul>
+         
+          <li>
+          <div class="dropdown show">
+                <a class="btn border-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Bonjour :<?php  echo $_SESSION['nom'];  ?> 
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="profile">Profile</a>
+                    <a class="dropdown-item" href="logout"> Se déconnecter</a>
+                </div>
+          </div>
+          </li>        </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 

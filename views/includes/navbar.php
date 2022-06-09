@@ -29,7 +29,7 @@
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#offres">offer</a></li>
           <li><a class="nav-link scrollto" href="#équipe">Equipre</a></li>
-          <li><a class="nav-link scrollto" href="formReserver">Réserve</a></li>
+          <li><a class="nav-link scrollto" href="login">Réserve</a></li>
           <li><a class="nav-link scrollto " href="test">Test d'orientation</a></li>
 
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>

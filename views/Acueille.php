@@ -27,7 +27,7 @@
             pour les jeunes à la recherche d’une orientation au Maroc</h2>
           <div>
             <div class="text-center text-lg-start">
-              <a href="formReserver"
+              <a href="login"
                 class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Réserver</span>
                 <i class="bi bi-arrow-right"></i>
@@ -247,7 +247,7 @@
                 <li style=" font-weight: bold;">1 entretien supplémentaire avec le spécialiste orientation scolaire</li>
                 <li style=" font-weight: bold;">Liste des écoles adaptées à la formation choisie</li>
               </ul>
-              <a href="formReserver" class="btn-buy">Réserver maintenant</a>
+              <a href="login" class="btn-buy">Réserver maintenant</a>
             </div>
           </div>
 
@@ -265,7 +265,7 @@
                 <li class="na">1 entretien supplémentaire avec le spécialiste orientation scolaire</li>
                 <li class="na">Liste des écoles adaptées à la formation choisie</li>
               </ul>
-              <a href="formReserver" class="btn-buy">Réserver maintenant</a>
+              <a href="login" class="btn-buy">Réserver maintenant</a>
             </div>
           </div>
 

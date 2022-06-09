@@ -45,7 +45,7 @@ if(!isset($_SESSION['nom'])){
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="Acueille">Accueil</a></li>
+          <li><a class="nav-link scrollto active" href="AcueilleEtudiant">Accueil</a></li>
           <li><a class="nav-link scrollto" href="#about">A propos </a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#offres">offer</a></li>
@@ -53,7 +53,7 @@ if(!isset($_SESSION['nom'])){
           <li><a class="nav-link scrollto" href="formReserver">Réserve</a></li>
           <li><a class="nav-link scrollto " href="test">Test d'orientation</a></li>
 
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+         
           <li>
           <div class="dropdown show">
                 <a class="btn border-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,7 +61,7 @@ if(!isset($_SESSION['nom'])){
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="dashboard">dashboard</a>
+                    <a class="dropdown-item" href="profile">Profile</a>
                     <a class="dropdown-item" href="logout"> Se déconnecter</a>
                 </div>
           </div>

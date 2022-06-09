@@ -75,7 +75,7 @@
                     </div>
 
                 </nav>
-                <div class="container-fluid px-4">
+         <div class="container-fluid px-4">
           <div class="row ">
             <div class=" d-flex justify-content-between my-3 ">
               <h1 class="fs-4 ">Profile d'utilisateur </h1>
