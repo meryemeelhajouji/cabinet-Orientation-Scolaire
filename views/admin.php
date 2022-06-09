@@ -103,7 +103,7 @@
                                 <tbody>
                                 <?php foreach($users as $users): ?>
                                     <tr>   
-                                        
+                                        <rtd>
                                         <td><?php echo $users['nom'] ?></td>
                                         <td><?php echo $users['prenom'] ?></td>
                                         <td><?php echo $users['email'] ?></td>

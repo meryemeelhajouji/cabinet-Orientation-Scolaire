@@ -7,8 +7,9 @@ if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_UR
 include ('./views/includes/navbar.php');
 }
 
+
 $home =new HomeController();
-$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin'];
+$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin','AcueilleEtudiant'];
 
 if(isset($_GET['page'])){
     if(in_array($_GET['page'],$page)){

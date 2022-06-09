@@ -57,8 +57,8 @@ if(!isset($_SESSION['nom'])){
                     <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/settings (1).png"> Settings</a>
                     <a href="logout"
-                        class="list-group-item mx-5 border-0 fw-bold  fs-6  bg-transparent  mt-5 mb-2 ">
-                        Logout <i class="fas fa-sign-out-alt"></i> </a>
+                        class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent  mt-5 mb-2 ">
+                        Se déconnecter <i class="fas fa-sign-out-alt"></i> </a>
 
                     </ul>
                 </div>
