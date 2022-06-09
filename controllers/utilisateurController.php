@@ -14,6 +14,7 @@ class utilisateurController
           if(password_verify($_POST['password'],$data['password'])==true)
           {
             $_SESSION['nom'] = $data['nom'];
+            $_SESSION['email'] = $data['email'];
             if($data['role'] == "admin")
             {
                 header("location: dashboard");

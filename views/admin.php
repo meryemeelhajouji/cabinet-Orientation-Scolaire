@@ -109,8 +109,8 @@
                                         <td><?php echo $users['email'] ?></td>
                                         <td><?php echo $users['adresse'] ?></td>
                                         <td><?php echo $users['tele'] ?></td>
-                                        <td> <a href="editeAdmin ?id=<?php echo $users['id_user ']; ?>"  > <i class="fas fa-pen mx-4 "></i></a></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
+                                        <td> <a href="editeAdmin?id=<?php echo $users['id_user'];?>"  > <i class="fas fa-pen mx-4 "></i></a></td>
+                                        <td> <i class="fas fa-trash"></i></td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </tbody>

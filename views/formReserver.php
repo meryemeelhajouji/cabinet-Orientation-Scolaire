@@ -4,6 +4,11 @@ $newuser = new utilisateurController();
 if(!isset($_SESSION['nom'])){
   header("location: login");
  }
+ if(!isset($_SESSION['reserve'])){
+  $data = new reservationController();
+ $users = $data->addReservation();
+ }
+ 
 
 ?>
 <!DOCTYPE html>
@@ -53,6 +58,7 @@ if(!isset($_SESSION['nom'])){
           <div class="dropdown show">
                 <a class="btn border-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Bonjour :<?php  echo $_SESSION['nom'];  ?> 
+                
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -87,28 +93,25 @@ if(!isset($_SESSION['nom'])){
                 <a href="#">Réserver ta séance</a>
               </h2>
               <div class="entry-content">
-                <form action="forms/contact.php" method="post" class="php-email-form">
+                <form action="" method="post" class="php-email-form">
                   <div class="row gy-4">
 
                     <div class="col-md-6">
-                      <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                      <input type="text" name="tele" class="form-control" placeholder="Votre Téléphoner" required>
                     </div>
 
                     <div class="col-md-6 ">
-                      <input type="email" class="form-control" name="email" placeholder="Votre e-mail" required>
+                      <input type="text" class="form-control" name="offre" placeholder="Votre offre" required>
                     </div>
 
-                    <div class="col-md-12">
-                      <input type="text" class="form-control" name="Téléphoner" placeholder="Téléphoner" required>
-                    </div>
-
+            
                     <div class="col-md-12">
                       <textarea class="form-control" name="message" rows="6" placeholder="Votre message"
                         required></textarea>
                     </div>
 
                     <div class="col-md-12 text-center">
-                      <button type="submit" class="btn">Réserver ma séance </button>
+                      <button type="submit" class="btn" name="reserve">Réserver ma séance </button>
                     </div>
 
                   </div>
