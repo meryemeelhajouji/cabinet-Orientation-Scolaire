@@ -3,8 +3,8 @@
  if(!isset($_SESSION['nom'])){
    header("location: login");
   }
-  $data = new chargeController();
-  $charge = $data->getAllCharge();
+  $data = new reservationController();
+  $reservation = $data->getAllReservation();
 ?>
 
 <!DOCTYPE html>
@@ -88,12 +88,8 @@
             </nav>
                     <div class="row ">
                         <div class=" d-flex justify-content-between my-3">
-                            <h1 class="fs-4 ">Liste des charges d'orientation</h1>
-                            <div>
-                                <i class="fas fa-sort mx-3  "></i>
-                                <a href="./ajouterEtudiant"> <button type="button" class="btn fw-bold  fs-6"
-                                        style="background:#DD10C9 ; color: #012970;">Ajouter un charge</button></a>
-                            </div>
+                            <h1 class="fs-4 ">Réservation </h1>
+                       
                         </div>
                         <div class=" table-responsive-sm table-responsive-md">
                             <table class="table bg-white rounded shadow-sm align-middle overflow-scroll  table-hover">
@@ -101,23 +97,25 @@
                                     <tr>
                                         <th> </th>
                                         <th>Nom</th>
-                                        <th>Prénom</th>
-                                        <th>Adresse</th>
-                                        <th>Téle</th>
                                         <th>email</th>
+                                        <th>tele</th>
+                                        <th>offre</th>
+                                        <th>message</th>
+                                        <th>state</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach($charge as $charge): ?>
+                                <?php foreach($reservation as $reservation): ?>
                                     <tr>   
-                                        
-                                        <td><?php echo $charge['nom'] ?></td>
-                                        <td><?php echo $charge['prenom'] ?></td>
-                                        <td><?php echo $charge['email'] ?></td>
-                                        <td><?php echo $charge['adresse'] ?></td>
-                                        <td><?php echo $charge['tele'] ?></td>
+                                        <td></td>
+                                        <td><?php echo $reservation['nom'] ?></td>
+                                        <td><?php echo $reservation['email'] ?></td>
+                                        <td><?php echo $reservation['tele'] ?></td>
+                                        <td><?php echo $reservation['offre'] ?></td>
+                                        <td><?php echo $reservation['message'] ?></td>
+                                        <td><button class="bg-danger border-0 px-4 py-2 text-white">invalide</button></td>
                                         <td> <i class="fas fa-pen mx-4 "></i></td>
                                         <td> <i class="fas fa-trash  "></i></td>
                                     </tr>
@@ -125,7 +123,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+
                 </div>
            
 

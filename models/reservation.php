@@ -18,6 +18,13 @@ class reservation{
           $stmt = null;
     }
 
+    static public function getAllReservation(){
+      $stmt = Db::connect()->prepare('SELECT * FROM `reservation` ' );
+      $stmt->execute();
+      return $stmt->fetchAll();
+     
+  }
+
 
 }
 

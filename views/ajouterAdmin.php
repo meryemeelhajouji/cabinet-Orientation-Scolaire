@@ -1,5 +1,9 @@
 
 <?php
+ $newuser = new utilisateurController();
+ if(!isset($_SESSION['nom'])){
+   header("location: login");
+  }
   $data = new adminController();
   $users = $data->addAdmin();
 ?>
@@ -23,7 +27,7 @@
 <body>
     <main>
         <div class="d-flex" id="dashboard">
-            <div class="bg  " id="sidebar-dashboard">
+        <div class="bg  " id="sidebar-dashboard">
                 <a href="index.html" class="logo my-3   d-flex align-items-center">
                     <img src="views/img/logo.png" alt="">
                     <span>
@@ -41,25 +45,25 @@
                     <a href="etudiant"
                         class="list-group-item mx-2 p-2 fw-bold  fs-6  border-0 bg-transparent my-2   ">
                         <img src="views/img/graduate-cap.png">Etudiants</a>
-                    <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent my-2 p-2 ">
+                    <a href="chargeOrientation" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent my-2 p-2 ">
                         <img src="views/img/user.png">Charges d'orientation </a>
-                    <a href="#" class="list-group-item mx-2 fw-bold  fs-6   border-0 my-2  rounded-3 p-2 ">
+                    <a href="reservation" class="list-group-item mx-2 fw-bold  fs-6   border-0 my-2  rounded-3 p-2 ">
                         <img src="views/img/booking.png">Réservation</a>
                     <a href="#" class="list-group-item mx-2 fw-bold  fs-6  border-0 my-2  rounded-3 p-2  ">
                         <img src="views/img/message.png"> Messages</a>
-                    <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
+                    <a href="admin" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/user.png">Utilisateurs </a>
                     <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/settings (1).png"> Settings</a>
-                    <a href="index.html"
-                        class="list-group-item mx-5 border-0 fw-bold  fs-6  bg-transparent  mt-5 mb-2 ">
-                        Logout <i class="fas fa-sign-out-alt"></i> </a>
+                    <a href="logout"
+                        class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent  mt-5 mb-2 ">
+                        Se déconnecter <i class="fas fa-sign-out-alt"></i> </a>
 
                     </ul>
                 </div>
-            </div>
+        </div>  
             <div id="page-content-dashboard" class="bt">
-                <nav class="navbar navbar-expand-lg   py-1 px-4 cont ">
+            <nav class="navbar navbar-expand-lg   py-1 px-4 cont ">
                     <div class="d-flex align-items-center">
 
                         <i class="fa fa-bars me-3 " id="menu-toggle"></i>
@@ -70,8 +74,10 @@
                     <div class="navbar-nav ms-auto">
                         <div class="nav-item ">
                             <form class="d-flex  justify-content-end mt-3 ">
-                                <input class="form-control me-2 " type="search" placeholder="Search..."
-                                    aria-label="Search">
+                                <div class="fw-bold fs-4 m-3 ">
+                                    <h5>Bonjour : <span><?php  echo $_SESSION['nom'];  ?> </span></h5>
+                                </div>
+                                    
                                 <a href="./profile" class="mx-3 "> <img src="views/img/user (1).png"
                                         class="mx-3 w-75"></a>
 
@@ -79,7 +85,7 @@
                         </div>
                     </div>
 
-                </nav>
+            </nav>
                 <div class="container-fluid px-4">
                     <div class="row ">
                         <div class=" d-flex justify-content-between my-3 mx-4">

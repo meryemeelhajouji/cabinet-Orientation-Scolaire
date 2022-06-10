@@ -25,6 +25,15 @@ class reservationController
             }
 
         }
+       
+        
+
+        public function getAllReservation(){
+        
+            $reservation = reservation::getAllReservation();
+            return $reservation; 
+        }
+    
 
      
 }
