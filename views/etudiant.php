@@ -89,11 +89,7 @@
                     <div class="row ">
                         <div class=" d-flex justify-content-between my-3">
                             <h1 class="fs-4 ">Liste des étudiant</h1>
-                            <div>
-                                <i class="fas fa-sort mx-3  "></i>
-                                <a href="./ajouterEtudiant"> <button type="button" class="btn fw-bold  fs-6"
-                                        style="background:#DD10C9 ; color: #012970;">Ajouter un étudiant</button></a>
-                            </div>
+                         
                         </div>
                         <div class=" table-responsive-sm table-responsive-md">
                             <table class="table bg-white rounded shadow-sm align-middle overflow-scroll  table-hover">
