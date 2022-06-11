@@ -24,7 +24,23 @@ class reservation{
       return $stmt->fetchAll();
      
   }
-
+ 
+   
+  static public function deleteReservation($data){
+    $id= $data; 
+    try{
+        $query = 'DELETE FROM `reservation` WHERE id_reservation = :id ';
+        $stmt = DB::connect()->prepare($query);
+        $stmt->execute(array(':id' => $id));
+        if($stmt->execute()){
+            return 'ok';
+        }else{
+          echo"error";
+        }
+    }catch(PDOException $ex){
+        echo 'erreur' . $ex->getMessage();
+    }
+}
 
 }
 

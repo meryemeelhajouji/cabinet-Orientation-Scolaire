@@ -34,7 +34,18 @@ class reservationController
             return $reservation; 
         }
     
-
+        public function deleteReservation(){
+            if(isset($_POST['id'])){
+              $data = $_POST['id'];
+              $result = reservation::deleteReservation($data);
+              if($result == 'ok'){
+                header('location: reservation');
+              }
+              else{
+                echo $result;
+              }
+            }
+          }  
      
-}
+        }
 ?>

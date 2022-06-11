@@ -116,8 +116,22 @@
                                         <td><?php echo $reservation['offre'] ?></td>
                                         <td><?php echo $reservation['message'] ?></td>
                                         <td><button class="bg-danger border-0 px-4 py-2 text-white">invalide</button></td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
+                                        <td class="d-flex"> 
+                                            <form action="deleteReservation" method="POST">
+                                                <input type="hidden" name="id" value="<?php echo $reservation['id_reservation']; ?>">
+                                                <button type="submit" class="border-0 btn">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
+                                            </td>
+                                            <td>
+                                            <form action="profile" method="POST">
+                                                <input type="hidden" name="id" value="<?php echo $reservation['id_reservation']; ?>">
+                                                <button type="submit" class="border-0 btn">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                            </form>
+                                            </td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </tbody>
