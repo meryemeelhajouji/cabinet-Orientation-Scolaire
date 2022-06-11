@@ -9,7 +9,7 @@ include ('./views/includes/navbar.php');
 
 
 $home =new HomeController();
-$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin','AcueilleEtudiant','profileEtudiant','reservation'];
+$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin','AcueilleEtudiant','profileEtudiant','reservation','deleteEtudiant','editeEtuiant'];
 
 if(isset($_GET['page'])){
     if(in_array($_GET['page'],$page)){

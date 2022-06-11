@@ -1,13 +1,18 @@
 <?php
  $newuser = new utilisateurController();
- if(!isset($_SESSION['nom'])){
-   header("location: login");
-  }
+if(!isset($_SESSION['nom'])){
+  header("location: login");
+ }
+ if(isset($_POST['id'])){
   $data = new EtudiantController();
-  $etudiant = $data->getAlletudiant();
-  
-?>
+  $admin = $data->getOneEtudiant();
+ }
 
+if(isset($_POST['update'])){
+ $dataa = new EtudiantController();
+ $dataa->updateEtudiant();
+}
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,8 +67,8 @@
 
                     </ul>
                 </div>
-        </div>
-            <div class="container-fluid px-4">
+            </div>
+            <div id="page-content-dashboard" class="bt">
             <nav class="navbar navbar-expand-lg   py-1 px-4 cont ">
                     <div class="d-flex align-items-center">
 
@@ -78,66 +83,81 @@
                                 <div class="fw-bold fs-4 m-3 ">
                                     <h5>Bonjour : <span><?php  echo $_SESSION['nom'];  ?> </span></h5>
                                 </div>
-                                    
-                              
+     
                             </form>
                         </div>
                     </div>
 
                 </nav>
-                    <div class="row ">
-                        <div class=" d-flex justify-content-between my-3">
-                            <h1 class="fs-4 ">Liste des étudiant</h1>
-                         
+         <div class="container-fluid px-4">
+          <div class="row ">
+            <div class=" d-flex justify-content-between my-3 ">
+              <h1 class="fs-4 ">Profile d'utilisateur </h1>
+
+            </div>
+            <div class="row ">
+         
+
+
+              <div class="col-lg-12 card bg-light shadow p-4 ">
+
+                <article class="entry ">
+
+
+
+                  <h2 class="entry-title text-center mb-4" style=" color: #012970; ">
+                    Modifier un etudiant
+                  </h2>
+
+
+
+                  <div class="entry-content">
+                    <form action="" method="post" class="php-email-form">
+                      <div class="row gy-4">
+
+                        <div class="col-md-6">
+                          <input type="text" name="nom" class="form-control" placeholder="Votre nom" value="<?php echo $admin['nom']; ?>" required>
                         </div>
-                        <div class=" table-responsive-sm table-responsive-md">
-                            <table class="table bg-white rounded shadow-sm align-middle overflow-scroll  table-hover">
-                                <thead>
-                                    <tr>
-                                        <th> </th>
-                                        <th>Nom</th>
-                                        <th>prenom</th>
-                                        <th>email</th>
-                                        <th>Adresse</th>
-                                        <th>Téle</th>
-                                        <th>email</th>
-                                        <th></th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php foreach($etudiant as $etudiant): ?>
-                                    <tr>   
-                                        <td>
-                                        <td><?php echo $etudiant['nom'] ?></td>
-                                        <td><?php echo $etudiant['prenom'] ?></td>
-                                        <td><?php echo $etudiant['email'] ?></td>
-                                        <td><?php echo $etudiant['adresse'] ?></td>
-                                        <td><?php echo $etudiant['tele'] ?></td>
-                                        <td class="d-flex"> 
-                                            <form action="deleteEtudiant" method="POST">
-                                                <input type="hidden" name="id" value="<?php echo $etudiant['id_user']; ?>">
-                                                <button type="submit" class="border-0 btn">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                            </form>
-                                            </td>
-                                            <td>
-                                            <form action="editeEtuiant" method="POST">
-                                                <input type="hidden" name="id" value="<?php echo $etudiant['id_user']; ?>">
-                                                <button type="submit" class="border-0 btn">
-                                                    <i class="fas fa-pen"></i>
-                                                </button>
-                                            </form>
-                                            </td>
-                                    </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
+                        <div class="col-md-6">
+                          <input type="text" name="prenom" class="form-control" placeholder="prenom" value="<?php echo $admin['prenom']; ?>"  required>
                         </div>
-                    </div>
-                </div>
-           
+
+                     
+                        <div class="col-md-12">
+                          <input type="text" class="form-control" name="tele" placeholder="Téléphoner"value="<?php echo $admin['tele']; ?>"   required>
+                        </div>
+                       
+                        <div class="col-md-12">
+                          <input type="text" class="form-control" name="adresse" placeholder="adresse" value="<?php echo $admin['adresse']; ?>"  required>
+                        </div>
+
+                        <div class="col-md-12">
+                          <input type="hidden" class="form-control" name="id" placeholder="id" value="<?php echo $admin['id_user']; ?>"   required>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                          <button type="submit" class="btn  w-25" name="update" style="background:#DD10C9 ; color: #012970; ">Modifier
+                          </button>
+                        </div>
+
+                      </div>
+                    </form>
+                  </div>
+
+                </article><!-- End blog entry -->
+
+
+              </div><!-- End blog entries list -->
+
+
+
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </div>
+            </div>
 
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>

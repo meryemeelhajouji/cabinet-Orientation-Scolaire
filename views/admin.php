@@ -3,9 +3,7 @@ $newuser = new utilisateurController();
 if (!isset($_SESSION['nom'])) {
     header("location: login");
 }
-if (!isset($_SESSION['nom'])) {
-    header("location: login");
-}
+
 $data = new adminController();
 $users = $data->getAllusers();
 ?>

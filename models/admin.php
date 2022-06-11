@@ -61,18 +61,18 @@ class admin{
 
       static public function update($data){
         $stmt = DB::connect()->prepare(' UPDATE utilisateur  SET nom = :nom , prenom = :prenom , tele = :tele , adresse = :adresse  WHERE id_user = :id');
-      $stmt->bindParam(':nom',   $data['nom']);
-      $stmt->bindParam(':prenom',  $data['prenom']);
-      $stmt->bindParam(':tele',  $data['tele']);
-      $stmt->bindParam(':adresse',    $data['adresse']); 
-        $stmt->bindParam(':id', $data['id']);
-        
-        if($stmt->execute()){
-          return 'ok';
-        }
-        else{
-          return 'No';
-        }
+        $stmt->bindParam(':nom',   $data['nom']);
+        $stmt->bindParam(':prenom',  $data['prenom']);
+        $stmt->bindParam(':tele',  $data['tele']);
+        $stmt->bindParam(':adresse',    $data['adresse']); 
+          $stmt->bindParam(':id', $data['id']);
+          
+          if($stmt->execute()){
+            return 'ok';
+          }
+          else{
+            return 'No';
+          }
       } 
 
  
