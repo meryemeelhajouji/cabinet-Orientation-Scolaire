@@ -75,8 +75,7 @@ $users = $data->getAllusers();
                                     <h5>Bonjour : <span><?php echo $_SESSION['nom'];  ?> </span></h5>
                                 </div>
 
-                                <a href="./profile" class="mx-3 "> <img src="views/img/user (1).png" class="mx-3 w-75"></a>
-
+                              
                             </form>
                         </div>
                     </div>
@@ -97,9 +96,9 @@ $users = $data->getAllusers();
                                     <th> </th>
                                     <th>Nom</th>
                                     <th>Prénom</th>
+                                    <th>email</th>
                                     <th>Adresse</th>
                                     <th>Téle</th>
-                                    <th>email</th>
                                     <th></th>
                                     <th></th>
                                 </tr>
@@ -108,12 +107,12 @@ $users = $data->getAllusers();
                                 <?php foreach ($users as $users) : ?>
                                     <tr>
                                         <rtd>
+                                            <td></td>
                                             <td><?php echo $users['nom'] ?></td>
                                             <td><?php echo $users['prenom'] ?></td>
                                             <td><?php echo $users['email'] ?></td>
                                             <td><?php echo $users['adresse'] ?></td>
                                             <td><?php echo $users['tele'] ?></td>
-                                            <td><?php echo $users['email'] ?></td>
                                             <td class="d-flex"> 
                                             <form action="deleteAdmin" method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $users['id_user']; ?>">
@@ -123,7 +122,7 @@ $users = $data->getAllusers();
                                             </form>
                                             </td>
                                             <td>
-                                            <form action="editeAdmin" method="POST">
+                                            <form action="profile" method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $users['id_user']; ?>">
                                                 <button type="submit" class="border-0 btn">
                                                     <i class="fas fa-pen"></i>

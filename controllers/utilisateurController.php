@@ -15,6 +15,7 @@ class utilisateurController
           {
             $_SESSION['nom'] = $data['nom'];
             $_SESSION['email'] = $data['email'];
+            $_SESSION['id'] = $data['id_user'];
             if($data['role'] == "admin")
             {
                 header("location: dashboard");

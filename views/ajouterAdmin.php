@@ -78,9 +78,7 @@
                                     <h5>Bonjour : <span><?php  echo $_SESSION['nom'];  ?> </span></h5>
                                 </div>
                                     
-                                <a href="./profile" class="mx-3 "> <img src="views/img/user (1).png"
-                                        class="mx-3 w-75"></a>
-
+                              
                             </form>
                         </div>
                     </div>

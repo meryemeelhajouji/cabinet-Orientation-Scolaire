@@ -84,8 +84,6 @@
           <h1 class=" fs-3 fw-bold m-5 pb-3 " style="border-bottom: #DD10C9 3px solid;">login </h1>
         </div>
 
-
-
         <form action="#" method="POST">
 
           <div class="mb-4">
@@ -96,9 +94,7 @@
           <div class="mb-4">
             <input type="password" class="form-control p-3  fw-bold " id="password" style="background: #f5f5f5 ;"
               name="password" value="" placeholder="mot de passe" id="exampleInputPassword1">
-
           </div>
-
 
           <input type="checkbox" class="mb-4  " name="remember" /> se souvenir de moi
           <a class=" text-decoration-underline ms-5  " style="color: #012970;" href="#"> <span>Mot de passe

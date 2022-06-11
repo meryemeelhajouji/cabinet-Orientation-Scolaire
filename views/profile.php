@@ -3,6 +3,15 @@
 if(!isset($_SESSION['nom'])){
   header("location: login");
  }
+ if(isset($_POST['id'])){
+  $data = new adminController();
+  $admin = $data->getOneAdmin();
+ }
+
+if(isset($_POST['update'])){
+ $dataa = new adminController();
+ $dataa->updateAdmin();
+}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,10 +83,7 @@ if(!isset($_SESSION['nom'])){
                                 <div class="fw-bold fs-4 m-3 ">
                                     <h5>Bonjour : <span><?php  echo $_SESSION['nom'];  ?> </span></h5>
                                 </div>
-                                    
-                                <a href="./profile" class="mx-3 "> <img src="views/img/user (1).png"
-                                        class="mx-3 w-75"></a>
-
+     
                             </form>
                         </div>
                     </div>
@@ -90,27 +96,10 @@ if(!isset($_SESSION['nom'])){
 
             </div>
             <div class="row ">
-              <div class="col-lg-4 card bg-light shadow p-4 mx-5 my-2">
-
-                <div class="sidebar  ">
+         
 
 
-                  <div class="text-center">
-                    <img src="./img/user (1).png" class="w-50">
-                  </div><!-- End sidebar categories-->
-
-                  <h3 class="text-center my-2">Maryam elhajouji</h3>
-                  <h5 class="text-center my-2">admin</h5>
-                  <div class="col-md-12 text-center">
-                    <button type="submit" class="btn my-2 w-50" style="background:#DD10C9 ; color: #012970; ">Modifier
-                    </button>
-                  </div>
-                </div>
-
-              </div>
-
-
-              <div class="col-lg-7 card bg-light shadow p-4 ">
+              <div class="col-lg-12 card bg-light shadow p-4 ">
 
                 <article class="entry ">
 
@@ -123,28 +112,31 @@ if(!isset($_SESSION['nom'])){
 
 
                   <div class="entry-content">
-                    <form action="forms/contact.php" method="post" class="php-email-form">
+                    <form action="" method="post" class="php-email-form">
                       <div class="row gy-4">
 
                         <div class="col-md-6">
-                          <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                          <input type="text" name="nom" class="form-control" placeholder="Votre nom" value="<?php echo $admin['nom']; ?>" required>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" name="prenom" class="form-control" placeholder="prenom" value="<?php echo $admin['prenom']; ?>"  required>
                         </div>
 
-                        <div class="col-md-6 ">
-                          <input type="email" class="form-control" name="email" placeholder="Votre e-mail" required>
+                     
+                        <div class="col-md-12">
+                          <input type="text" class="form-control" name="tele" placeholder="Téléphoner"value="<?php echo $admin['tele']; ?>"   required>
+                        </div>
+                       
+                        <div class="col-md-12">
+                          <input type="text" class="form-control" name="adresse" placeholder="adresse" value="<?php echo $admin['adresse']; ?>"  required>
                         </div>
 
                         <div class="col-md-12">
-                          <input type="text" class="form-control" name="Téléphoner" placeholder="Téléphoner" required>
-                        </div>
-
-                        <div class="col-md-12">
-                          <textarea class="form-control" name="message" rows="6" placeholder="Votre message"
-                            required></textarea>
+                          <input type="hidden" class="form-control" name="id" placeholder="id" value="<?php echo $admin['id_user']; ?>"   required>
                         </div>
 
                         <div class="col-md-12 text-center">
-                          <button type="submit" class="btn  w-25" style="background:#DD10C9 ; color: #012970; ">Modifier
+                          <button type="submit" class="btn  w-25" name="update" style="background:#DD10C9 ; color: #012970; ">Modifier
                           </button>
                         </div>
 
