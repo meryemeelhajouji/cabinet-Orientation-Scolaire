@@ -6,16 +6,17 @@
      },
     {
         question: " Quelle est ta voie ?", 
-        type: "multichoix", choix: ["Voie générale ","Voie professionnelle","Voie technologique","Voie technologique"]    
+        type: "multichoix", choix: ["Voie générale ","Voie professionnelle","Voie technologique" ]   
     },
+
     {
         question: " Dans quel domaine ou filière tu étudier maintenant ?", 
-        type: "text" }
-    ,
+        type: "text" 
+    },
     {
         question: " Cochez le métier qui vous correspond le plus", 
         type: "multichoix", choix: [
-        "Technicien / technicienne informatique",
+        "technicienne informatique",
         " Cadre en Marketing digital",
         "Comptable/financier ",
         "Médecin généraliste "]    
@@ -130,8 +131,7 @@ form.addEventListener("submit",(e) => {
             </div>
           
            
-            <p> Il vous suffit de répondre le plus sérieusement possible aux questions proposées et le plus honnêtement
-              possible aussi. Choisissez obligatoirement parmi le choix qui vous correspond le plus.</p>
+            <p> ${resultatAlgo()}</p>
     
           </div>
     
@@ -145,6 +145,55 @@ form.addEventListener("submit",(e) => {
         affichage()
 })
 precedent.addEventListener("click", () => {
-    i-1;
+    i--;
     affichage()
 })
+
+let filièreInformatique = () => {
+    let info = 0;
+    if(r[3] =="technicienne informatique")  info++ ;
+    if(r[4] =="oui ") info++ ;
+    return info;
+}
+let filièreMarketing = () => {
+    let mark = 0;
+    if(r[3] =="Cadre en Marketing digital") mark++;
+     if(r[9] =="oui ")  mark++;
+    return mark;
+}
+let filièreCopmtFinance= () => {
+    let c = 0;
+    if(r[3] =="Comptable/financier")  c++;
+   if(r[6] =="oui ") c++;
+    return c;
+}
+let filièreMedecin= () => {
+    let med = 0;
+    if(r[3] =="Médecin généraliste") med++;
+    if(r[5] =="oui ")  med++;
+    return med;
+}
+
+let resultatAlgo = () => {
+    let infor = filièreInformatique();
+    let marke = filièreMarketing();
+    let com = filièreCopmtFinance();
+    let medec = filièreMedecin();
+    if(infor >=1){
+        return `Nous avons compilé pour vous la somme des points accordés pour chacune de vos réponses.
+                Voici les spécialité   les plus susceptibles de vous intéresser  informatique `;}
+    else if(marke >=1){
+         return `Nous avons compilé pour vous la somme des points accordés pour chacune de vos réponses.
+         Voici les spécialité   les plus susceptibles de vous intéresser marketing`;}            
+    else if(com >=1){
+         return `Nous avons compilé pour vous la somme des points accordés pour chacune de vos réponses.
+         Voici les spécialité   les plus susceptibles de vous intéresser comptabilité`;}  
+    else if(medec >=1){
+         return `Nous avons compilé pour vous la somme des points accordés pour chacune de vos réponses.
+         Voici les spécialité   les plus susceptibles de vous intéresser médcine`;}                                                         
+    else{
+         return marke;  
+    }
+                       
+
+}
