@@ -4,10 +4,10 @@ $newuser = new utilisateurController();
 if(!isset($_SESSION['nom'])){
   header("location: login");
  }
- if(!isset($_SESSION['reserve'])){
+ 
   $data = new reservationController();
  $users = $data->addReservation();
- }
+
  
 
 ?>
@@ -93,7 +93,7 @@ if(!isset($_SESSION['nom'])){
                 <a href="#">Réserver ta séance</a>
               </h2>
               <div class="entry-content">
-                <form action="" method="post" class="php-email-form">
+                <form action="" method="" class="php-email-form">
                   <div class="row gy-4">
 
                     <div class="col-md-6">

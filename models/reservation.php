@@ -9,10 +9,10 @@ class reservation{
         $stmt->bindParam(':offre',  $data['offre']); 
         $stmt->bindParam(':message',   $data['message']);
         if($stmt->execute()){
-            return 'User is created successfully';
+            return 'reservation is created successfully';
           }
           else{
-            return 'User was not created successfully';
+            return 'reservation was not created successfully';
           }
          
           $stmt = null;

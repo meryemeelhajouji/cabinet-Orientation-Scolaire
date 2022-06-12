@@ -1,3 +1,12 @@
+<?php
+
+  $data = new contactController();
+  $contact = $data->addContact();
+  
+ 
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +21,6 @@
 </head>
 
 <body>
-
-  
 
 
   <!-- ======= Hero Section ======= -->
@@ -296,13 +303,8 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="views/assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="views/assets/img/team/team-1.png" class="img-fluid" alt="">
+               
               </div>
               <div class="member-info">
                 <h4>Mehdi Harit</h4>
@@ -317,13 +319,8 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="views/assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="views/assets/img/team/team-2.png" class="img-fluid" alt="">
+              
               </div>
               <div class="member-info">
                 <h4>Nadia Zitouni</h4>
@@ -336,13 +333,8 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="views/assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="views/assets/img/team/team-3.png" class="img-fluid" alt="">
+              
               </div>
               <div class="member-info">
                 <h4>William Anderson</h4>
@@ -358,13 +350,8 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="views/assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="views/assets/img/team/team-4.png" class="img-fluid" alt="">
+               
               </div>
               <div class="member-info">
                 <h4>Houda Mouhandiz</h4>
@@ -434,11 +421,11 @@
           </div>
 
           <div class="col-lg-6 ">
-            <form action="forms/contact.php" method="post" class="php-email-form">
+            <form action="" method="post" class="php-email-form">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                  <input type="text" name="nom" class="form-control" placeholder="Votre nom" required>
                 </div>
 
                 <div class="col-md-6 ">
@@ -446,7 +433,7 @@
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Sujet" required>
+                  <input type="text" class="form-control" name="sujet" placeholder="Sujet" required>
                 </div>
 
                 <div class="col-md-12">
@@ -454,13 +441,9 @@
                     required></textarea>
                 </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Votre message a été envoyé. Merci!</div>
-
-                  <button type="submit">Envoyer Message</button>
-                </div>
+              
+                  <button type="submit" name="contact">Envoyer Message</button>
+              
 
               </div>
             </form>

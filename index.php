@@ -3,7 +3,8 @@
 require_once('./autoload.php');
 require_once('./controllers/HomeController.php');
 require_once('./views/includes/alerts.php');
-if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_URI'])=="Questionnaire"||basename($_SERVER['REQUEST_URI'])=="test"){
+
+if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_URI'])=="cabinetdOrientationScolaire"||basename($_SERVER['REQUEST_URI'])=="Questionnaire"||basename($_SERVER['REQUEST_URI'])=="test"){
 include ('./views/includes/navbar.php');
 }
 
@@ -22,7 +23,7 @@ if(isset($_GET['page'])){
     }
 
 
-    if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_URI'])=="inscrire"||basename($_SERVER['REQUEST_URI'])=="login"||basename($_SERVER['REQUEST_URI'])=="Questionnaire"||basename($_SERVER['REQUEST_URI'])=="test"){
+    if( basename($_SERVER['REQUEST_URI'])=="Acueille"||basename($_SERVER['REQUEST_URI'])=="cabinetdOrientationScolaire"||basename($_SERVER['REQUEST_URI'])=="inscrire"||basename($_SERVER['REQUEST_URI'])=="login"||basename($_SERVER['REQUEST_URI'])=="Questionnaire"||basename($_SERVER['REQUEST_URI'])=="test"){
         include ('./views/includes/footer.php');}
 
 

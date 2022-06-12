@@ -112,7 +112,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #4154f1;
+  background: #e44aec;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -124,7 +124,7 @@ section {
   line-height: 0;
 }
 .back-to-top:hover {
-  background: #6776f4;
+  background: #e44aec;
   color: #fff;
 }
 .back-to-top.active {
@@ -1207,30 +1207,10 @@ section {
   background-size: contain;
   z-index: 1;
 }
-.team .member .social {
-  position: absolute;
-  right: -100%;
-  top: 30px;
-  opacity: 0;
-  border-radius: 4px;
-  transition: 0.5s;
-  background: rgba(255, 255, 255, 0.3);
-  z-index: 2;
-}
-.team .member .social a {
-  transition: color 0.3s;
-  color: rgba(1, 41, 112, 0.5);
-  margin: 15px 12px;
-  display: block;
-  line-height: 0;
-  text-align: center;
-}
-.team .member .social a:hover {
-  color: rgba(1, 41, 112, 0.8);
-}
-.team .member .social i {
-  font-size: 18px;
-}
+
+
+
+
 .team .member .member-info {
   padding: 10px 15px 20px 15px;
 }
@@ -1257,10 +1237,7 @@ section {
   transform: scale(1.08);
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
-.team .member:hover .social {
-  right: 8px;
-  opacity: 1;
-}
+
 
 /*--------------------------------------------------------------
 # Clients
@@ -1622,13 +1599,8 @@ section {
   padding: 0;
   color: #012970;
 }
-.blog .blog-author .social-links {
-  margin: 0 10px 10px 0;
-}
-.blog .blog-author .social-links a {
-  color: rgba(1, 41, 112, 0.5);
-  margin-right: 5px;
-}
+
+
 .blog .blog-author p {
   font-style: italic;
   color: #b7b7b7;
@@ -1959,14 +1931,7 @@ section {
   margin-bottom: 0;
   font-family: "Nunito", sans-serif;
 }
-.footer .footer-top .social-links a {
-  font-size: 20px;
-  display: inline-block;
-  color: rgba(1, 41, 112, 0.5);
-  line-height: 0;
-  margin-right: 10px;
-  transition: 0.3s;
-}
+
 .footer .footer-top .social-links a:hover {
   color: #012970;
 }
