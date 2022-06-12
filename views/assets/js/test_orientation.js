@@ -7,7 +7,51 @@
     {
         question: " Quelle est ta voie ?", 
         type: "multichoix", choix: ["Voie générale ","Voie professionnelle","Voie technologique","Voie technologique"]    
+    },
+    {
+        question: " Dans quel domaine ou filière tu étudier maintenant ?", 
+        type: "text" }
+    ,
+    {
+        question: " Cochez le métier qui vous correspond le plus", 
+        type: "multichoix", choix: [
+        "Technicien / technicienne informatique",
+        " Cadre en Marketing digital",
+        "Comptable/financier ",
+        "Médecin généraliste "]    
+    } ,
+    {
+        question: "développe des programmes des site web ou des robot", 
+        type: "multichoix", choix: ["oui ","non"]    
+   
+    } ,
+    {
+        question: "Prodiguer des soins à des personnes éprouvant des problèmes de santé physique ou mentale.", 
+        type: "multichoix", choix: ["oui ","non"]    
+   
+    } ,
+    {
+        question: "Résous des problèmes d’entreprises et gère leurs finances.", 
+        type: "multichoix", choix: ["oui ","non"]    
+   
+    } ,
+    {
+        question: "Participer à des activités de prévention et de dépistage en rapport avec la santé humaine.", 
+        type: "multichoix", choix: ["oui ","non"]    
+   
+    },
+    {
+        question: "Travailler en équipe et interagir avec d'autres personnes.", 
+        type: "multichoix", choix: ["oui ","non"]    
+   
     }
+    ,
+    {
+        question: "Fais des études de marché.", 
+        type: "multichoix", choix: ["oui ","non"]    
+   
+    }
+   
     
 ]
 
@@ -20,12 +64,12 @@ let precedent = document.querySelector("#precedent")
 let main = document.querySelector("main")
 let bar = document.querySelector(".progress-bar")
 let r = []
-for(let k = 0; k < 24; k++){
+for(let k = 0; k < 10; k++){
     r[k] = '';
 }
 let affichage = () => {
     score.textContent = i+1
-    bar.style.width = `${100/2 * (i)}%`;
+    bar.style.width = `${100/10 * (i)}%`;
     (i == 0) ? precedent.setAttribute('disabled', ''): precedent.removeAttribute('disabled');
     question.textContent = questions[i].question
     if(questions[i].type == "multichoix"){
@@ -40,14 +84,9 @@ let affichage = () => {
     }else if(questions[i].type == "text"){
         formulaire.innerHTML = `
         <div class="input-group mb-3">
-            <input type="number" min="${questions[i].min}" max="${questions[i].max}" class="form-control" name="reponse" placeholder="${questions[i].min}-${questions[i].max}">
-            <span class="input-group-text">${questions[i].unite}</span>
+            <input type="text"  class="form-control" name="reponse" placeholder="votre choix required">
+          
         </div> `;
-    }else{
-        formulaire.innerHTML = `
-        <div class="mb-3">
-            <input type="text" name="reponse" class="form-control">
-        </div>`
     }
 }
 affichage()
@@ -55,18 +94,12 @@ affichage()
 form.addEventListener("submit",(e) => {
     e.preventDefault()
     if(questions[i].type == "text"){
-        if((form.reponse.value >= questions[i].min) && (form.reponse.value <= questions[i].max)){
-            r[i] = form.reponse.value;
-        }
-        else{
-            alert("Valeur non valide:")
-            return
-        }
+        r[i] = form.reponse.value;
     }else{
         r[i] = form.reponse.value;
     }
     i++
-    if(i == 2){
+    if(i == 10){
         main.innerHTML = `
         <section id="values" class="values ">
         <div class="d-flex justify-content-center align-items-center w-100 p-3  ">
@@ -110,4 +143,8 @@ form.addEventListener("submit",(e) => {
                         `;
     }else
         affichage()
+})
+precedent.addEventListener("click", () => {
+    i-1;
+    affichage()
 })

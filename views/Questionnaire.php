@@ -69,9 +69,9 @@
           </div>
           <form>
             <div id="question" class="titre mt-4"></div>
-            <div id="formulaire" class="flex center">
+            <div id="formulaire" class="d-flexflex-column text-center m-5 fw-bold fs-4">
             </div>
-            <div class="flex betwen">
+            <div class="d-flex justify-content-between">
               <button type="button" id="precedent" class="test border-0">Précedent</button>
               <button type="submit" class="test border-0">Suivant</button>
             </div>
