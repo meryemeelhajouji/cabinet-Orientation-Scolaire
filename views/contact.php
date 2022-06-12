@@ -4,8 +4,8 @@ if (!isset($_SESSION['nom'])) {
     header("location: login");
 }
 
-$data = new adminController();
-$users = $data->getAllusers();
+$data = new contactController();
+$contact = $data->getAllContat();
 ?>
 
 <!DOCTYPE html>
@@ -81,11 +81,8 @@ $users = $data->getAllusers();
                 </nav>
                 <div class="row ">
                     <div class=" d-flex justify-content-between my-3">
-                        <h1 class="fs-4 ">Liste d'admin</h1>
-                        <div>
-                            <i class="fas fa-sort mx-3  "></i>
-                            <a href="./ajouterAdmin"> <button type="button" class="btn fw-bold  fs-6" style="background:#DD10C9 ; color: #012970;">Ajouter un admin</button></a>
-                        </div>
+                        <h1 class="fs-4 ">Liste message</h1>
+                       
                     </div>
                     <div class=" table-responsive-sm table-responsive-md">
                         <table class="table bg-white rounded shadow-sm align-middle overflow-scroll  table-hover">
@@ -93,39 +90,32 @@ $users = $data->getAllusers();
                                 <tr>
                                     <th> </th>
                                     <th>Nom</th>
-                                    <th>Prénom</th>
                                     <th>email</th>
-                                    <th>Adresse</th>
-                                    <th>Téle</th>
+                                    <th>sujet</th>
+                                    <th>message</th>
                                     <th></th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($users as $users) : ?>
+                                <?php foreach ($contact as $contact) : ?>
                                     <tr>
                                         <rtd>
                                             <td></td>
-                                            <td><?php echo $users['nom'] ?></td>
-                                            <td><?php echo $users['prenom'] ?></td>
-                                            <td><?php echo $users['email'] ?></td>
-                                            <td><?php echo $users['adresse'] ?></td>
-                                            <td><?php echo $users['tele'] ?></td>
+                                            <td><?php echo $contact['nom'] ?></td>
+                                            <td><?php echo $contact['email'] ?></td>
+                                            <td><?php echo $contact['sujet'] ?></td>
+                                            <td><?php echo $contact['message'] ?></td>
                                             <td class="d-flex"> 
-                                            <form action="deleteAdmin" method="POST">
-                                                <input type="hidden" name="id" value="<?php echo $users['id_user']; ?>">
+                                            <form action="deletecontact" method="POST">
+                                                <input type="hidden" name="id" value="<?php echo $contact['id_contact']; ?>">
                                                 <button type="submit" class="border-0 btn">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </form>
                                             </td>
                                             <td>
-                                            <form action="profile" method="POST">
-                                                <input type="hidden" name="id" value="<?php echo $users['id_user']; ?>">
-                                                <button type="submit" class="border-0 btn">
-                                                    <i class="fas fa-pen"></i>
-                                                </button>
-                                            </form>
+                                           
                                             </td>
                                         <?php endforeach; ?>
                             </tbody>

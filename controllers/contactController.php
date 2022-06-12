@@ -22,5 +22,29 @@ class contactController{
         }
 
 }
+
+    public function getAllContat(){
+            
+        $contact = contact::getAll();
+        return $contact; 
+    }
+    
+    public function deleteContact(){
+        if(isset($_POST['id'])){
+          $data = $_POST['id'];
+          $result = contact::deleteContact($data);
+          if($result == 'ok'){
+            header('location: contact');
+          }
+          else{
+            echo $result;
+          }
+        }
+      }  
+
+    
+
+
+
 }
 ?>
