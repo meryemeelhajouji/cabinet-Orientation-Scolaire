@@ -5,6 +5,11 @@
   }
   $data = new reservationController();
   $reservation = $data->getAllReservation();
+
+  if(isset($_POST['valide'])){
+    $dataa = new reservationController();
+    $dataa->confirmation();
+   }
 ?>
 
 <!DOCTYPE html>
@@ -115,22 +120,24 @@
                                         <td><?php echo $reservation['tele'] ?></td>
                                         <td><?php echo $reservation['offre'] ?></td>
                                         <td><?php echo $reservation['message'] ?></td>
-                                        <td><button class="bg-danger border-0 px-4 py-2 text-white">invalide</button></td>
+                                        <td><?php echo $reservation['state'] ?></td>
+                                        <!-- <td><button class="bg-danger border-0 px-4 py-2 text-white">invalide</button></td> -->
                                         <td class="d-flex"> 
+                                        <form action="#" method="POST">
+                                                <input type="hidden" name="id" value="<?php echo $reservation['id_reservation']; ?>">
+                                                <button type="submit" name="valide" class="bg-info border-0 px-4 py-2 text-white mx-3">
+                                                   Confirme
+                                                </button>
+                                            </form>
                                             <form action="deleteReservation" method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $reservation['id_reservation']; ?>">
-                                                <button type="submit" class="border-0 btn">
-                                                    <i class="fas fa-trash"></i>
+                                                <button type="submit"class="bg-danger border-0 px-4 py-2 text-white">
+                                                    Refuse
                                                 </button>
                                             </form>
                                             </td>
                                             <td>
-                                            <form action="profile" method="POST">
-                                                <input type="hidden" name="id" value="<?php echo $reservation['id_reservation']; ?>">
-                                                <button type="submit" class="border-0 btn">
-                                                    <i class="fas fa-pen"></i>
-                                                </button>
-                                            </form>
+                                          
                                             </td>
                                     </tr>
                                     <?php endforeach; ?>

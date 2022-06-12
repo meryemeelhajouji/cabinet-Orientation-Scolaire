@@ -11,14 +11,15 @@ class reservationController
                     'tele'    => $_POST['tele'],
                     'offre'    => $_POST['offre'],
                     'message'    => $_POST['message'],
+                    'state'    => "En attend",
                 );
                 
                 $result = reservation::add($data);
-                if($result == 'reservation  is created successfully'){
-                    header('location: admin');
+                if($result == 'ok'){
+                    header('location: AcueilleEtudiant');
                 }
                 else{
-                    echo $result;
+                    echo "error";
                 }
             
         
@@ -45,7 +46,22 @@ class reservationController
                 echo $result;
               }
             }
-          }  
+        }  
+
+        public function confirmation(){
+          if(isset($_POST['valide'])){
+              $data = array(
+                'state'   => "valide",
+                'id' => $_POST['id']
+              );
+              $result = reservation::update($data);
+              if($result === 'ok'){
+                  header('location: reservation');
+              }else{
+                  echo $result;
+              }
+          }
+      }
      
-        }
+ }
 ?>
