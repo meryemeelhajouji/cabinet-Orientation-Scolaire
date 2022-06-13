@@ -13,18 +13,28 @@ class utilisateurController
           $data = $user->getUser($data);
           if(password_verify($_POST['password'],$data['password'])==true)
           {
-            $_SESSION['nom'] = $data['nom'];
-            $_SESSION['email'] = $data['email'];
-            $_SESSION['id'] = $data['id_user'];
-            if($data['role'] == "admin")
-            {
-                header("location: dashboard");
-            }
-            else if($data['role'] == "etudiant")
-            {
-                header("location: AcueilleEtudiant");  
-            }
-        
+                    $_SESSION['nom'] = $data['nom'];
+                    $_SESSION['email'] = $data['email'];
+                    $_SESSION['id'] = $data['id_user'];
+
+                    if(isset($_POST['remember'])){
+                      setcookie("email", $_POST['email'],time() + 3600);
+                      setcookie("password", $_POST['password'],time() + 3600);
+                    }else{
+                      setcookie("email");
+                      setcookie("password");
+                    }
+                    header("location: dashboard");
+
+                    // if($data['role'] == "admin")
+                    // {
+                    //     header("location: dashboard");
+                    // }
+                    // else if($data['role'] == "etudiant")
+                    // {
+                    //     header("location: AcueilleEtudiant");  
+                    // }
+                
         }
 
 
