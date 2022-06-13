@@ -91,6 +91,22 @@ let affichage = () => {
     }
 }
 affichage()
+function sendResultToBackend(result){
+    console.log('sending stat started!');
+    let formData=new FormData();
+    formData.append('resultat',result);
+    $.ajax({
+        data:formData,
+        url: "http://localhost/cabinetdOrientationScolaire/saveQuizeResult",
+        method: 'POST',
+        processData: false,
+        contentType: false,
+        success: function (data) {
+            console.log('response from server');
+            console.log(data);
+        }
+      });
+  }
 
 form.addEventListener("submit",(e) => {
     e.preventDefault()
@@ -101,6 +117,9 @@ form.addEventListener("submit",(e) => {
     }
     i++
     if(i == 10){
+        let result=resultatAlgo();
+        console.log('test 1');
+        sendResultToBackend(result);
         main.innerHTML = `
         <section id="values" class="values ">
         <div class="d-flex justify-content-center align-items-center w-100 p-3  ">
@@ -130,8 +149,8 @@ form.addEventListener("submit",(e) => {
               </div>
             </div>
           
-           
-            <p> ${resultatAlgo()}</p>
+     
+            <p> ${result}</p>
     
           </div>
     
