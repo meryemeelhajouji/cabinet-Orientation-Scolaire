@@ -1,3 +1,12 @@
+
+<?php
+
+$newuser = new utilisateurController();
+if(!isset($_SESSION['nom'])){
+  header("location: login");
+ }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,13 +16,61 @@
 
   <title>MonParcour </title>
 
- 
+  <link
+  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+
+  <link href="views/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="views/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  
+
+  <link href="views/assets/css/style.css" rel="stylesheet">
+<link href="views/assets/css/test.css" rel="stylesheet">
 
 </head>
 
 <body>
 
+<header id="header" class="header fixed-top mb-5">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
+      <a href="Acueille" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span>
+          <spam style="color: #e44aec;">Mon</spam>Parcour
+        </span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="AcueilleEtudiant">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="#about">A propos </a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#offres">offer</a></li>
+          <li><a class="nav-link scrollto" href="#équipe">Equipre</a></li>
+          <li><a class="nav-link scrollto" href="formReserver">Réserve</a></li>
+          <li><a class="nav-link scrollto " href="Questionnaire">Test d'orientation</a></li>
+
+         
+          <li>
+          <div class="dropdown show">
+                <a class="btn border-0 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Bonjour :<?php  echo $_SESSION['nom'];  ?> 
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="profile">Profile</a>
+                    <a class="dropdown-item" href="logout"> Se déconnecter</a>
+                </div>
+          </div>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
 
   <!-- ======= Breadcrumbs ======= -->
   <section class="breadcrumbs">
@@ -98,7 +155,9 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="views/assets/js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
   
 </script>

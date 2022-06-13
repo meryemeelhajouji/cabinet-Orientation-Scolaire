@@ -26,14 +26,14 @@ class utilisateurController
                     }
                     header("location: dashboard");
 
-                    // if($data['role'] == "admin")
-                    // {
-                    //     header("location: dashboard");
-                    // }
-                    // else if($data['role'] == "etudiant")
-                    // {
-                    //     header("location: AcueilleEtudiant");  
-                    // }
+                    if($data['role'] == "admin")
+                    {
+                        header("location: dashboard");
+                    }
+                    else if($data['role'] == "etudiant")
+                    {
+                        header("location: AcueilleEtudiant");  
+                    }
                 
         }
 

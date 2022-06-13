@@ -51,7 +51,7 @@ if(!isset($_SESSION['nom'])){
           <li><a class="nav-link scrollto" href="#offres">offer</a></li>
           <li><a class="nav-link scrollto" href="#équipe">Equipre</a></li>
           <li><a class="nav-link scrollto" href="formReserver">Réserve</a></li>
-          <li><a class="nav-link scrollto " href="test">Test d'orientation</a></li>
+          <li><a class="nav-link scrollto " href="Questionnaire">Test d'orientation</a></li>
 
          
           <li>
@@ -71,7 +71,7 @@ if(!isset($_SESSION['nom'])){
       </nav><!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+</header><!-- End Header -->
 
 
   <!-- ======= Hero Section ======= -->

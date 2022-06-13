@@ -91,6 +91,7 @@ let affichage = () => {
     }
 }
 affichage()
+
 function sendResultToBackend(result){
     console.log('sending stat started!');
     let formData=new FormData();
@@ -150,7 +151,9 @@ form.addEventListener("submit",(e) => {
             </div>
           
      
-            <p> ${result}</p>
+            <p>${result}</p>
+            
+            
     
           </div>
     

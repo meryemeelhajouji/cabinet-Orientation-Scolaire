@@ -71,7 +71,7 @@
 
       </div>
       <div class=" text-center ">
-        <button type="button" onclick="window.location.href='./Questionnaire'"
+        <button type="button" onclick="window.location.href='./login'"
           class="btn btn-lg  button m-2 test ">Démarrer le
           test</button>
 

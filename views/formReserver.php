@@ -51,7 +51,7 @@ if(!isset($_SESSION['nom'])){
           <li><a class="nav-link scrollto" href="AcueilleEtudiant">offer</a></li>
           <li><a class="nav-link scrollto" href="AcueilleEtudiant">Equipre</a></li>
           <li><a class="nav-link scrollto" href="formReserver">Réserve</a></li>
-          <li><a class="nav-link scrollto " href="test">Test d'orientation</a></li>
+          <li><a class="nav-link scrollto " href="Questionnaire">Test d'orientation</a></li>
 
          
           <li>
