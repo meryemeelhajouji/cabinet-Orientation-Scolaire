@@ -78,6 +78,12 @@ class EtudiantController{
       }
   }
 
+  public function getCountEtudiant(){
+        
+    $etudiant = etudiant::getCountEtudiant();
+    return $etudiant; 
+}
+
   
       
 

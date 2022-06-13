@@ -70,4 +70,12 @@ class etudiant{
             return 'No';
           }
     } 
+
+
+    static public function getCountEtudiant(){
+      $stmt = Db::connect()->prepare('SELECT count(*) as etu FROM `utilisateur` WHERE role="etudiant"' );
+      $stmt->execute();
+      return $stmt->fetch(PDO::FETCH_ASSOC);
+    
+  }
 }?>

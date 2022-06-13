@@ -75,5 +75,12 @@ class admin{
           }
       } 
 
+      static public function getCountUser(){
+        $stmt = Db::connect()->prepare('SELECT count(*) as user FROM `utilisateur` WHERE role="admin"' );
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+      
+    } 
+
  
 }?>

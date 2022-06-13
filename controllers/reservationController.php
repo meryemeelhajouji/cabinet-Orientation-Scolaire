@@ -62,6 +62,12 @@ class reservationController
               }
           }
       }
+
+      public function getCountReserve(){
+        
+        $etudiant = reservation::getCountReserve();
+        return $etudiant; 
+    }
      
  }
 ?>

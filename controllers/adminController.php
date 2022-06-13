@@ -76,6 +76,12 @@ class adminController{
           }
       }
 
+      public function getCountUser(){
+        
+        $etudiant = admin::getCountUser();
+        return $etudiant; 
+    }
+
   }
     
 

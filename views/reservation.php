@@ -83,9 +83,7 @@
                                     <h5>Bonjour : <span><?php  echo $_SESSION['nom'];  ?> </span></h5>
                                 </div>
                                     
-                                <a href="./profile" class="mx-3 "> <img src="views/img/user (1).png"
-                                        class="mx-3 w-75"></a>
-
+                               
                             </form>
                         </div>
                     </div>
@@ -131,7 +129,7 @@
                                             </form>
                                             <form action="deleteReservation" method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $reservation['id_reservation']; ?>">
-                                                <button type="submit"class="bg-danger border-0 px-4 py-2 text-white">
+                                                <button type="submit"class="bg-danger border-0 px-4 py-2 text-white ">
                                                     Refuse
                                                 </button>
                                             </form>

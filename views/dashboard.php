@@ -1,11 +1,15 @@
 <?php
-
 $newuser = new utilisateurController();
 if(!isset($_SESSION['nom'])){
   header("location: login");
  }
+ $newuser = new adminController();
+$userCount = $newuser->getCountUser();
+$res = new reservationController();
+$reserveCount = $res->getCountReserve();
  $data = new EtudiantController();
  $etudiant = $data->getAlletudiant();
+ $etudiantCount = $data->getCountEtudiant();
 
 ?>
 <!DOCTYPE html>
@@ -94,7 +98,7 @@ if(!isset($_SESSION['nom'])){
 
                                     <p class="fs-5 mb-5 Secondary-text">étudiants</p>
                                 </div>
-                                <h1 class="fs-5 mt-5">243</h1>
+                                <h1 class="fs-5 mt-5"><?php  echo $etudiantCount['etu'];  ?></h1>
                             </div>
                         </div>
                         <div class="col-lg-3  col-md-5  mb-4 ">
@@ -113,7 +117,7 @@ if(!isset($_SESSION['nom'])){
 
                                     <p class="fs-5 mb-5 Secondary-text">Réservation</p>
                                 </div>
-                                <h1 class="fs-5 mt-5">556</h1>
+                                <h1 class="fs-5 mt-5"><?php  echo $reserveCount['rese'];  ?></h1>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-5  mb-4">
@@ -123,7 +127,7 @@ if(!isset($_SESSION['nom'])){
 
                                     <p class="fs-5 mb-5 text-white">Utilisateurs</p>
                                 </div>
-                                <h1 class="fs-5 mt-5 text-white">3</h1>
+                                <h1 class="fs-5 mt-5 text-white"><?php  echo $userCount['user'];  ?></h1>
                             </div>
                         </div>
                     </div>

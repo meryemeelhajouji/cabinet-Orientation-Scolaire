@@ -56,6 +56,13 @@ class reservation{
       }
   } 
 
+  static public function getCountReserve(){
+    $stmt = Db::connect()->prepare('SELECT count(*) as rese FROM `reservation`' );
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  
+} 
+
 }
 
 ?>
