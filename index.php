@@ -1,5 +1,6 @@
 <?php
 
+
 require_once('./autoload.php');
 require_once('./controllers/HomeController.php');
 require_once('./views/includes/alerts.php');
