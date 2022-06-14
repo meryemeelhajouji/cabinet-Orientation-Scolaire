@@ -93,20 +93,18 @@ let affichage = () => {
 affichage()
 
 function sendResultToBackend(result){
-    console.log('sending stat started!');
-    let formData=new FormData();
-    formData.append('resultat',result);
-    $.ajax({
-        data:formData,
-        url: "http://localhost/cabinetdOrientationScolaire/saveQuizeResult",
-        method: 'POST',
-        processData: false,
-        contentType: false,
-        success: function (data) {
-            console.log('response from server');
-            console.log(data);
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST','http://localhost/cabinetdOrientationScolaire/saveQuizeResult');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    
+    xhr.onload = function() {
+        if(xhr.status == 200) {
+            let res = xhr.responseText
+            
+            console.log(res)
         }
-      });
+    }
+    xhr.send('result='+result)
   }
 
 form.addEventListener("submit",(e) => {
@@ -119,7 +117,6 @@ form.addEventListener("submit",(e) => {
     i++
     if(i == 10){
         let result=resultatAlgo();
-        console.log('test 1');
         sendResultToBackend(result);
         main.innerHTML = `
         <section id="values" class="values ">
@@ -152,7 +149,9 @@ form.addEventListener("submit",(e) => {
           
      
             <p>${result}</p>
+        
             
+
             
     
           </div>

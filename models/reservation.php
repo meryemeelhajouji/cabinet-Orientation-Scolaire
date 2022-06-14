@@ -2,7 +2,7 @@
 class reservation{
     
     static public function add($data){
-        $stmt = DB::connect()->prepare('INSERT INTO `reservation`(nom,email,tele,offre,message,state) VALUES (:nom,:email,:tele,:offre,:message,:state)');
+        $stmt = DB::connect()->prepare('INSERT INTO `reservation`(tele,offre,message,state) VALUES (:nom,:email,:tele,:offre,:message,:state)');
         $stmt->bindParam(':nom',   $data['nom']);
         $stmt->bindParam(':email',  $data['email']);
         $stmt->bindParam(':tele',  $data['tele']);

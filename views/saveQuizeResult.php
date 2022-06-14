@@ -1,11 +1,8 @@
 <?php 
-if(isset($_SESSION['nom'])){
-    if(isset($_POST['resultat'])){
-
-        echo 'success';
-    }else{
-        echo'error';
+    $testController = new testController();
+    if(isset($_POST['result'])) {
+        $msg = $_POST['result'];
+        $testController->addTest($msg);
+    } else {
+        echo 'nn';
     }
-}else{
-    echo 'vous étes pas connecté';
-}
