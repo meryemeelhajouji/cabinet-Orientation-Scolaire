@@ -112,7 +112,7 @@
                                         <td><?php echo $test['date'] ?></td>
                                         <td><?php echo $test['result'] ?></td>
                                         <td class="d-flex"> 
-                                            <form action="deleteEtudiant" method="POST">
+                                            <form action="deleteTest" method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $test['id_test']; ?>">
                                                 <button type="submit" class="border-0 btn">
                                                     <i class="fas fa-trash"></i>

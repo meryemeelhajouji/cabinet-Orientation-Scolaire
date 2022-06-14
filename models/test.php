@@ -1,7 +1,8 @@
 <?php
-session_start();
+
 
 class test{
+
     static public function add($data){
         $stmt = DB::connect()->prepare('INSERT INTO `test`(result,date, id_etudiant) VALUES (:result,sysdate(), :session)');
         $stmt->bindParam(':result', $data);
@@ -21,6 +22,23 @@ class test{
       $stmt->execute();
       return $stmt->fetchAll();
     
-  }
+    }
+
+    static public function deleteTest($data){
+      $id= $data; 
+      try{
+          $query = 'DELETE FROM `test` WHERE id_test = :id ';
+          $stmt = DB::connect()->prepare($query);
+          $stmt->execute(array(':id' => $id));
+          if($stmt->execute()){
+              return 'ok';
+          }else{
+            echo"error";
+          }
+      }catch(PDOException $ex){
+          echo 'erreur' . $ex->getMessage();
+      }
+    }
+
 }
 ?>

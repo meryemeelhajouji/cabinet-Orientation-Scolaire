@@ -13,7 +13,20 @@ class testController{
         
       $test = test::getAll();
       return $test; 
-  }
+    }
+
+    public function deleteTest(){
+      if(isset($_POST['id'])){
+        $data = $_POST['id'];
+        $result = test::deleteTest($data);
+        if($result == 'ok'){
+          header('location: testResult');
+        }
+        else{
+          echo $result;
+        }
+      }
+    }  
 }
 
 
