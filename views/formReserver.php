@@ -101,7 +101,13 @@ if(!isset($_SESSION['nom'])){
                     </div>
 
                     <div class="col-md-6 ">
-                      <input type="text" class="form-control" name="offre" placeholder="Votre offre" required>
+                      <select name="offre"  class="form-control" required>
+                      <option value="">--choise un offre--</option>
+                      <option value="dog">Integrale</option>
+                      <option value="cat">Decouverte</option>
+                     
+                     </select>
+                    
                     </div>
 
             

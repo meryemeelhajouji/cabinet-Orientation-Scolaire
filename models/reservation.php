@@ -2,13 +2,13 @@
 class reservation{
     
     static public function add($data){
-        $stmt = DB::connect()->prepare('INSERT INTO `reservation`(tele,offre,message,state) VALUES (:nom,:email,:tele,:offre,:message,:state)');
-        $stmt->bindParam(':nom',   $data['nom']);
-        $stmt->bindParam(':email',  $data['email']);
+        $stmt = DB::connect()->prepare('INSERT INTO `reservation`(tele,offre,message,state,id_etudiant) VALUES (:tele,:offre,:message,:state,:etudiant)');
         $stmt->bindParam(':tele',  $data['tele']);
         $stmt->bindParam(':offre',  $data['offre']); 
         $stmt->bindParam(':message',   $data['message']);
         $stmt->bindParam(':state',   $data['state']);
+        $stmt->bindParam(':etudiant',   $_SESSION['id']);
+
         if($stmt->execute()){
             return 'ok';
           }
@@ -20,7 +20,7 @@ class reservation{
     }
 
     static public function getAllReservation(){
-      $stmt = Db::connect()->prepare('SELECT * FROM `reservation` ' );
+      $stmt = Db::connect()->prepare('SELECT * FROM reservation INNER JOIN utilisateur ON reservation.id_etudiant = utilisateur.id_user; ' );
       $stmt->execute();
       return $stmt->fetchAll();
      
