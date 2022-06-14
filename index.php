@@ -11,7 +11,7 @@ include ('./views/includes/navbar.php');
 
 
 $home =new HomeController();
-$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin','AcueilleEtudiant','profileEtudiant','reservation','deleteEtudiant','editeEtuiant','deleteReservation','contact','deletecontact','valideReserve','saveQuizeResult','morad'];
+$page=['Acueille','formReserver','inscrire','login','Questionnaire','test','dashboard','admin','ajouterAdmin','profile','chargeOrientation','etudiant','logout','deleteAdmin','editeAdmin','AcueilleEtudiant','profileEtudiant','reservation','deleteEtudiant','editeEtuiant','deleteReservation','contact','deletecontact','valideReserve','saveQuizeResult','testResult'];
 
 if(isset($_GET['page'])){
     if(in_array($_GET['page'],$page)){

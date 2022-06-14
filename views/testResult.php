@@ -1,17 +1,13 @@
 <?php
-$newuser = new utilisateurController();
-if(!isset($_SESSION['nom'])){
-  header("location: login");
- }
- $newuser = new adminController();
-$userCount = $newuser->getCountUser();
-$res = new reservationController();
-$reserveCount = $res->getCountReserve();
- $data = new EtudiantController();
- $etudiant = $data->getAlletudiant();
- $etudiantCount = $data->getCountEtudiant();
-
+ $newuser = new utilisateurController();
+ if(!isset($_SESSION['nom'])){
+   header("location: login");
+  }
+  $data = new testController();
+  $test = $data->getAllTest();
+  
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +28,7 @@ $reserveCount = $res->getCountReserve();
 <body>
     <main>
         <div class="d-flex" id="dashboard">
-            <div class="bg  " id="sidebar-dashboard">
+        <div class="bg  " id="sidebar-dashboard">
                 <a href="index.html" class="logo my-3   d-flex align-items-center">
                     <img src="views/img/logo.png" alt="">
                     <span>
@@ -54,7 +50,7 @@ $reserveCount = $res->getCountReserve();
                         <img src="views/img/user.png">Charges d'orientation </a>
                     <a href="reservation" class="list-group-item mx-2 fw-bold  fs-6   border-0 my-2  rounded-3 p-2 ">
                         <img src="views/img/booking.png">Réservation</a>
-                    <a href="contact" class="list-group-item mx-2 fw-bold  fs-6  border-0 my-2  rounded-3 p-2  ">
+                    <a href="#" class="list-group-item mx-2 fw-bold  fs-6  border-0 my-2  rounded-3 p-2  ">
                         <img src="views/img/message.png"> Messages</a>
                     <a href="admin" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/user.png">Utilisateurs </a>
@@ -66,9 +62,9 @@ $reserveCount = $res->getCountReserve();
 
                     </ul>
                 </div>
-            </div>
-            <div id="page-content-dashboard" class="bt">
-                <nav class="navbar navbar-expand-lg   py-1 px-4 cont ">
+        </div>
+            <div class="container-fluid px-4">
+            <nav class="navbar navbar-expand-lg   py-1 px-4 cont ">
                     <div class="d-flex align-items-center">
 
                         <i class="fa fa-bars me-3 " id="menu-toggle"></i>
@@ -83,95 +79,57 @@ $reserveCount = $res->getCountReserve();
                                     <h5>Bonjour : <span><?php  echo $_SESSION['nom'];  ?> </span></h5>
                                 </div>
                                     
-                                
+                              
                             </form>
                         </div>
                     </div>
 
                 </nav>
-                <div class="container-fluid px-4">
-                    <div class="row my-2 d-flex justify-content-center">
-                        <div class="col-lg-3 col-md-5 mb-4 ">
-                            <div class="p-3 d-flex justify-content-around align-items-center card_student ">
-                                <div>
-                                    <i class="fas fa-graduation-cap fs-5  p-1"></i>
-
-                                    <p class="fs-5 mb-5 Secondary-text">étudiants</p>
-                                </div>
-                                <h1 class="fs-5 mt-5"><?php  echo $etudiantCount['etu'];  ?></h1>
-                            </div>
+                    <div class="row ">
+                        <div class=" d-flex justify-content-between my-3">
+                            <h1 class="fs-4 ">Liste des étudiant qui passe le test</h1>
+                         
                         </div>
-                        <div class="col-lg-3  col-md-5  mb-4 ">
-                            <div class="p-3  d-flex justify-content-around align-items-center card_cours ">
-                                <div>
-                                    <img src="views/img/approval.png">
-                                    <p class="fs-5 mb-5 Secondary-text">Test</p>
-                                </div>
-                                <h1 class="fs-5 mt-5 text-white">13</h1>
-                            </div>
-                        </div>
-                        <div class=" col-lg-3  col-md-5  mb-4">
-                            <div class="p-3   d-flex justify-content-around align-items-center card_payment ">
-                                <div>
-                                    <img src="views/img/bookingCart.png">
-
-                                    <p class="fs-5 mb-5 Secondary-text">Réservation</p>
-                                </div>
-                                <h1 class="fs-5 mt-5"><?php  echo $reserveCount['rese'];  ?></h1>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-5  mb-4">
-                            <div class="p-3   d-flex justify-content-around align-items-center card_user ">
-                                <div>
-                                    <i class="far fa-user fs-5  p-1"></i>
-
-                                    <p class="fs-5 mb-5 text-white">Utilisateurs</p>
-                                </div>
-                                <h1 class="fs-5 mt-5 text-white"><?php  echo $userCount['user'];  ?></h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid px-4">
-                        <div class="row ">
-                            <div class=" d-flex justify-content-between my-3">
-                                <h1 class="fs-4 ">Liste des étudiant</h1>
-
-                            </div>
-                            <div class=" table-responsive-sm table-responsive-md">
-                                <table
-                                    class="table bg-white rounded shadow-sm align-middle overflow-scroll  table-hover">
-                                  
-                                    <thead>
+                        <div class=" table-responsive-sm table-responsive-md">
+                            <table class="table bg-white rounded shadow-sm align-middle overflow-scroll  table-hover">
+                                <thead>
                                     <tr>
                                         <th> </th>
                                         <th>Nom</th>
                                         <th>email</th>
-                                        <th>Adresse</th>
-                                        <th>Téle</th>
-                                        <th>email</th>
+                                        <th>date</th>
+                                        <th>Result</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach($etudiant as $etudiant): ?>
+                                <?php foreach($test as $test): ?>
                                     <tr>   
                                         <td>
-                                        <td><?php echo $etudiant['nom'] ?></td>
-                                        <td><?php echo $etudiant['email'] ?></td>
-                                        <td><?php echo $etudiant['adresse'] ?></td>
-                                        <td><?php echo $etudiant['tele'] ?></td>
-                                        <td> <i class="fas fa-pen mx-4 "></i></td>
-                                        <td> <i class="fas fa-trash  "></i></td>
+                                        <td><?php echo $test['nom'] ?></td>
+                                        <td><?php echo $test['email'] ?></td>
+                                        <td><?php echo $test['date'] ?></td>
+                                        <td><?php echo $test['result'] ?></td>
+                                        <td class="d-flex"> 
+                                            <form action="deleteEtudiant" method="POST">
+                                                <input type="hidden" name="id" value="<?php echo $test['id_test']; ?>">
+                                                <button type="submit" class="border-0 btn">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
+                                            </td>
+                                            <td>
+                                           
+                                            </td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </tbody>
-                                </table>
-                            </div>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </div>
+           
 
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>

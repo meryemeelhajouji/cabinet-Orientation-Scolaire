@@ -15,5 +15,12 @@ class test{
         
           $stmt = null;
     }
+
+    static public function getAll(){
+      $stmt = Db::connect()->prepare('SELECT * FROM test INNER JOIN utilisateur ON test.id_etudiant = utilisateur.id_user; ' );
+      $stmt->execute();
+      return $stmt->fetchAll();
+    
+  }
 }
 ?>
