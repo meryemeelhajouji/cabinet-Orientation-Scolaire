@@ -37,24 +37,20 @@ $users = $data->getAllusers();
 
                     <a href="dashboard" class="list-group-item mx-2 p-2 border-0 my-2  rounded-3  fw-bold  fs-6  " style="background:#DD10C9 ;">
                         <img src="views/img/home.png"> Accueil</a>
-                    <a href="testOr" class="list-group-item mx-2 fw-bold border-0 bg-transparent p-2">
+                    <a href="testResult" class="list-group-item mx-2 fw-bold border-0 bg-transparent p-2">
                         <img src="views/img/test.png">Test </a>
                     <a href="etudiant" class="list-group-item mx-2 p-2 fw-bold  fs-6  border-0 bg-transparent my-2   ">
                         <img src="views/img/graduate-cap.png">Etudiants</a>
-                    <a href="chargeOrientation" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent my-2 p-2 ">
-                        <img src="views/img/user.png">Charges d'orientation </a>
                     <a href="reservation" class="list-group-item mx-2 fw-bold  fs-6   border-0 my-2  rounded-3 p-2 ">
                         <img src="views/img/booking.png">Réservation</a>
                     <a href="contact" class="list-group-item mx-2 fw-bold  fs-6  border-0 my-2  rounded-3 p-2  ">
                         <img src="views/img/message.png"> Messages</a>
                     <a href="admin" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
                         <img src="views/img/user.png">Utilisateurs </a>
-                    <a href="#" class="list-group-item mx-2 border-0 fw-bold  fs-6   bg-transparent my-2 p-2 ">
-                        <img src="views/img/settings (1).png"> Settings</a>
                     <a href="logout" class="list-group-item mx-2 border-0 fw-bold  fs-6  bg-transparent  mt-5 mb-2 ">
                         Se déconnecter <i class="fas fa-sign-out-alt"></i> </a>
 
-                    </ul>
+
                 </div>
             </div>
             <div class="container-fluid px-4">
@@ -62,7 +58,7 @@ $users = $data->getAllusers();
                     <div class="d-flex align-items-center">
 
                         <i class="fa fa-bars me-3 " id="menu-toggle"></i>
-                        <h5>Accueil</h5>
+                        <h5>Admin</h5>
                     </div>
 
 
@@ -73,7 +69,7 @@ $users = $data->getAllusers();
                                     <h5>Bonjour : <span><?php echo $_SESSION['nom'];  ?> </span></h5>
                                 </div>
 
-                              
+
                             </form>
                         </div>
                     </div>
@@ -111,21 +107,21 @@ $users = $data->getAllusers();
                                             <td><?php echo $users['email'] ?></td>
                                             <td><?php echo $users['adresse'] ?></td>
                                             <td><?php echo $users['tele'] ?></td>
-                                            <td class="d-flex"> 
-                                            <form action="deleteAdmin" method="POST">
-                                                <input type="hidden" name="id" value="<?php echo $users['id_user']; ?>">
-                                                <button type="submit" class="border-0 btn">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                            </form>
+                                            <td class="d-flex">
+                                                <form action="deleteAdmin" method="POST">
+                                                    <input type="hidden" name="id" value="<?php echo $users['id_user']; ?>">
+                                                    <button type="submit" class="border-0 btn">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </form>
                                             </td>
                                             <td>
-                                            <form action="profile" method="POST">
-                                                <input type="hidden" name="id" value="<?php echo $users['id_user']; ?>">
-                                                <button type="submit" class="border-0 btn">
-                                                    <i class="fas fa-pen"></i>
-                                                </button>
-                                            </form>
+                                                <form action="profile" method="POST">
+                                                    <input type="hidden" name="id" value="<?php echo $users['id_user']; ?>">
+                                                    <button type="submit" class="border-0 btn">
+                                                        <i class="fas fa-pen"></i>
+                                                    </button>
+                                                </form>
                                             </td>
                                         <?php endforeach; ?>
                             </tbody>

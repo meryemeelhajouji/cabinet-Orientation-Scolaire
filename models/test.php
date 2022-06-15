@@ -4,6 +4,7 @@
 class test{
 
     static public function add($data){
+        session_start();
         $stmt = DB::connect()->prepare('INSERT INTO `test`(result,date, id_etudiant) VALUES (:result,sysdate(), :session)');
         $stmt->bindParam(':result', $data);
         $stmt->bindParam(':session', $_SESSION['id']);

@@ -1,4 +1,3 @@
-
 <?php
 
 $newuser = new utilisateurController();

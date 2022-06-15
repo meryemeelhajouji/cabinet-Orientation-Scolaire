@@ -9,29 +9,35 @@ class EtudiantController{
     }
 
 
-
     public function addEtudiants(){
         if(isset($_POST['inscrire'])){
-          if($_POST['password'] == $_POST['confirmePassword']){
-            $data = array(
-                'nom'   => $_POST['nom'],
-                'email'    => $_POST['email'],
-                'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-                'role'   => "etudiant",
-            );
-            
-            $result = etudiant::add($data);
-              if($result == 'User is created successfully'){
-                header('location: login');
-              }
-              else{
-                echo $result;
-              }
-          }
-          else{
-            echo 'password not matched';
-          }
+          
+          if(empty($_POST['email']) || empty($_POST['password']) || empty($_POST['email']) || empty($_POST['confirmePassword'])){
+      
+            $_SESSION["message_error"] = "Remplire votre information .";
        
+            }else 
+            {
+                    if($_POST['password'] == $_POST['confirmePassword']){
+                      $data = array(
+                          'nom'   => $_POST['nom'],
+                          'email'    => $_POST['email'],
+                          'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
+                          'role'   => "etudiant",
+                      );
+                      
+                      $result = etudiant::add($data);
+                        if($result == 'User is created successfully'){
+                          header('location: login');
+                        }
+                        else{
+                          echo $result;
+                        }
+                    }
+                    else{
+                    $_SESSION["message_error"] = "confirme password ";
+                    }
+             }    
         }
 
     }

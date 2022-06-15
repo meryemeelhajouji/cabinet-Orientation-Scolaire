@@ -105,6 +105,7 @@ function sendResultToBackend(result){
         }
     }
     xhr.send('result='+result)
+  
   }
 
 form.addEventListener("submit",(e) => {

@@ -31,10 +31,8 @@
           <div class="board-stepper fw-bold text-center d-flex justify-content-around align-items-center">
             <div class="">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 25">
-                <circle id="Ellipse_271" data-name="Ellipse 271" cx="19.5" cy="19.5" r="19.5" fill="#f8f9fa"
-                  stroke="#DD10C9" stroke-width=10 />
-                <circle id="Ellipse_275" data-name="Ellipse 275" cx="5" cy="5" r="5" transform="translate(15 14)"
-                  fill="#DD10C9" />
+                <circle id="Ellipse_271" data-name="Ellipse 271" cx="19.5" cy="19.5" r="19.5" fill="#f8f9fa" stroke="#DD10C9" stroke-width=10 />
+                <circle id="Ellipse_275" data-name="Ellipse 275" cx="5" cy="5" r="5" transform="translate(15 14)" fill="#DD10C9" />
               </svg>
               <div class="information">Informations</div>
             </div>
@@ -71,8 +69,7 @@
 
       </div>
       <div class=" text-center ">
-        <button type="button" onclick="window.location.href='./login'"
-          class="btn btn-lg  button m-2 test ">Démarrer le
+        <button type="button" onclick="window.location.href='./login'" class="btn btn-lg  button m-2 test ">Démarrer le
           test</button>
 
       </div>
@@ -80,11 +77,10 @@
 
     </section><!-- End Values Section -->
   </main><!-- End #main -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
- 
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
   <!-- Vendor JS Files -->
-  <  <script src="views/assets/js/main.js"></>
+  < <script src="views/assets/js/main.js"></>
 
 </body>
 
