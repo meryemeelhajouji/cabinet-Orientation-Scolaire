@@ -97,8 +97,7 @@ if (isset($_POST['login'])) {
           </div>
 
           <input type="checkbox" class="mb-4  " name="remember" /> se souvenir de moi
-          <a class=" text-decoration-underline ms-5  " style="color: #012970;" href="#"> <span>Mot de passe
-              oublié?</span></a>
+        
 
           <button type="submit" class="btn w-100 text-white text-uppercase  mt-5 " name="login">
             Connexion

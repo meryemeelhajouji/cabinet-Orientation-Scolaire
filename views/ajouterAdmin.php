@@ -81,26 +81,31 @@ $users = $data->addAdmin();
                         <div>
                             <article class="entry">
                                 <div class="card bg-light shadow p-4">
-                                    <form action="" method="post" class="php-email-form">
+                                    <form action="" method="post" class="php-email-form" onclick="return validation()">
                                         <div class="row gy-4">
 
                                             <div class="col-md-6">
-                                                <input type="text" name="nom" class="form-control" placeholder="Votre nom" required>
+                                                <input type="text" name="nom" id="nom" class="form-control" placeholder="Votre nom" >
+                                                <span id="nameid"></span> 
                                             </div>
 
                                             <div class="col-md-6">
-                                                <input type="email" class="form-control" name="email" placeholder="Votre e-mail" required>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail" >
+                                                <span id="emailid"></span> 
                                             </div>
 
                                             <div class="col-md-12">
-                                                <input type="text" class="form-control" name="adresse" placeholder="adresse" required>
+                                                <input type="text" class="form-control" name="adresse" id="adresse" placeholder="adresse" required>
+                                                <span id="adressid"></span> 
                                             </div>
 
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" name="tele" placeholder="Télephone" required>
+                                                <input type="text" class="form-control" name="tele" id="tele" placeholder="Télephone" required>
+                                                <span id="phoneid"></span> 
                                             </div>
                                             <div class="col-md-6">
-                                                <input type="text" class="form-control" name="password" placeholder="password" required>
+                                                <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
+                                                <span id="passwordid"></span> 
                                             </div>
 
                                             <div class="col-md-12 text-center">
@@ -127,6 +132,7 @@ $users = $data->addAdmin();
                     el.classList.toggle("toggled");
                 };
             </script>
+              <script src="views/js/validation.js"></script>
     </main>
 
 </body>

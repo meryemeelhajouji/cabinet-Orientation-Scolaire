@@ -12,6 +12,7 @@ $users = $data->addReservation();
 <html lang="en">
 
 <head>
+  
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>MonParcour </title>
@@ -20,6 +21,12 @@ $users = $data->addReservation();
   <link href="views/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="views/assets/css/style.css" rel="stylesheet">
   <link href="views/assets/css/test.css" rel="stylesheet">
+<style>
+  form li{
+    color:red !important;
+
+  }
+</style>
 </head>
 
 <body>
@@ -75,10 +82,10 @@ $users = $data->addReservation();
                 <a href="#">Réserver ta séance</a>
               </h2>
               <div class="entry-content">
-                <form action="" method="post" class="php-email-form" onsubmit="return validation()">
+                <form action="" method="post" class="php-email-form" 	 data-parsley-validate="">
                   <div class="row gy-4">
                     <div class="col-md-6">
-                      <input type="text" name="tele" id="tele" class="form-control" placeholder="Votre Téléphoner" >
+                      <input type="text" name="tele" id="tel" class="form-control" data-parsley-error-message="Entre votre Téléphoner" placeholder="Votre Téléphoner" required>
                       <span id="phoneid"></span> 
                     </div>
                     <div class="col-md-6">
@@ -119,13 +126,17 @@ $users = $data->addReservation();
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <script src="views/js/validation.js"></script>
+
   <script src="views/assets/js/main.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"></script> 
+  <!-- <link rel="stylesheet" type="text/css" href="http://parsleyjs.org/src/parsley.css" /> -->
 </body>
 
 </html>
