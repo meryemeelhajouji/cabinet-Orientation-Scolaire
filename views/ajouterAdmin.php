@@ -85,12 +85,12 @@ $users = $data->addAdmin();
                                         <div class="row gy-4">
 
                                             <div class="col-md-6">
-                                                <input type="text" name="nom" id="nom" class="form-control" placeholder="Votre nom" >
+                                                <input type="text" name="nom" id="nom" class="form-control" placeholder="Votre nom" required>
                                                 <span id="nameid"></span> 
                                             </div>
 
                                             <div class="col-md-6">
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail" >
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail" required>
                                                 <span id="emailid"></span> 
                                             </div>
 
