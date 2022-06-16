@@ -109,12 +109,14 @@ if (isset($_POST['valide'])) {
                                         <td><?php echo $reservation['state'] ?></td>
                                         <!-- <td><button class="bg-danger border-0 px-4 py-2 text-white">invalide</button></td> -->
                                         <td class="d-flex">
+                                        <?php if($reservation['state']=="En attend"){?>
                                             <form action="#" method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $reservation['id_reservation']; ?>">
                                                 <button type="submit" name="valide" class="bg-info border-0 px-4 py-2 text-white mx-3">
                                                     Confirme
                                                 </button>
                                             </form>
+                                        <?php } ?>
                                             <form action="deleteReservation" method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $reservation['id_reservation']; ?>">
                                                 <button type="submit" class="bg-danger border-0 px-4 py-2 text-white ">
