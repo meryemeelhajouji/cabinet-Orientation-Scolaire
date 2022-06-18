@@ -96,7 +96,6 @@ if (isset($_POST['login'])) {
             <input type="password" class="form-control p-3  fw-bold " id="password" style="background: #f5f5f5 ;" name="password" value="" placeholder="mot de passe" id="exampleInputPassword1" >
           </div>
 
-          <input type="checkbox" class="mb-4  " name="remember" /> se souvenir de moi
         
 
           <button type="submit" class="btn w-100 text-white text-uppercase  mt-5 " name="login">

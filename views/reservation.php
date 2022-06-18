@@ -103,7 +103,7 @@ if (isset($_POST['valide'])) {
                                         <td></td>
                                         <td><?php echo $reservation['nom'] ?></td>
                                         <td><?php echo $reservation['email'] ?></td>
-                                        <td><?php echo $reservation['tele'] ?></td>
+                                        <td><?php echo $reservation['telephone'] ?></td>
                                         <td><?php echo $reservation['offre'] ?></td>
                                         <td><?php echo $reservation['message'] ?></td>
                                         <td><?php echo $reservation['state'] ?></td>

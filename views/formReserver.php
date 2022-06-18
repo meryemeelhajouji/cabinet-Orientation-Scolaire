@@ -85,8 +85,8 @@ $users = $data->addReservation();
                     <div class="col-md-6">
                       <select name="offre" class="form-control" required id="offre">
                         <option value="">--choise un offre--</option>
-                        <option value="dog">Integrale</option>
-                        <option value="cat">Decouverte</option>
+                        <option value="Integrale">Integrale</option>
+                        <option value="Decouverte">Decouverte</option>
                       </select>
                       <span id="offreid"></span>
                     </div>
