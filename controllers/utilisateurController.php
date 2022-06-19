@@ -24,6 +24,7 @@ class utilisateurController
                               if(password_verify($_POST['password'],$data['password']))
                               {
                                         $_SESSION['nom'] = $data['nom'];
+                                        $_SESSION['role'] = $data['role'];
                                         $_SESSION['email'] = $data['email'];
                                         $_SESSION['id'] = $data['id_user'];
 

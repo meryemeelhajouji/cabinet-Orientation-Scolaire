@@ -1,6 +1,6 @@
 <?php
 $newuser = new utilisateurController();
-if (!isset($_SESSION['nom'])) {
+if (!isset($_SESSION['nom']) || $_SESSION['role'] != "admin") {
     header("location: login");
 }
 $newuser = new adminController();

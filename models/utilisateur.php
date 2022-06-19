@@ -7,8 +7,9 @@ class utilisateur{
         $stmt->bindParam(':email', $data['email']);
         $stmt->execute();
         $res = $stmt->fetch(PDO::FETCH_ASSOC);
+      
         if($res){
-                return $stmt->fetch(PDO::FETCH_ASSOC);
+                return $res;
         }else{
                 return "dont exists";}
         
