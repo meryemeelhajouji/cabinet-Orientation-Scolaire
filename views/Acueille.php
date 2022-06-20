@@ -184,7 +184,6 @@
             <div class="box">
               <h1 style="color: #012970; font-weight:600;"> Formule Integrale </h1>
               <div class="price">3500 DH</div>
-              <img src="views/assets/img/pricing-free.png" class="img-fluid" alt="">
               <ul>
                 <li>2 entretien avec le spécialiste orientation scolaire</li>
                 <li>1 test psychométrique</li>
@@ -200,7 +199,6 @@
             <div class="box">
               <h1 style="color: #012970; font-weight:600;">Formule Decouverte </h1>
               <div class="price">2900 DH</div>
-              <img src="views/assets/img/pricing-ultimate.png" class="img-fluid" alt="">
               <ul>
                 <li>2 entretien avec le spécialiste orientation scolaire</li>
                 <li>1 test psychométrique</li>

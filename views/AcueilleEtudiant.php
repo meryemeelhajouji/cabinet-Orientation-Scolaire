@@ -295,7 +295,6 @@ if(!isset($_SESSION['nom'])){
             <div class="box">
               <h1 style="color: #012970; font-weight:600;"> Formule Integrale </h1>
               <div class="price">3500 DH</div>
-              <img src="views/assets/img/pricing-free.png" class="img-fluid" alt="">
               <ul>
                 <li>2 entretien avec le spécialiste orientation scolaire</li>
                 <li>1 test psychométrique</li>
@@ -313,7 +312,6 @@ if(!isset($_SESSION['nom'])){
             <div class="box">
               <h1 style="color: #012970; font-weight:600;">Formule Decouverte </h1>
               <div class="price">2900 DH</div>
-              <img src="views/assets/img/pricing-ultimate.png" class="img-fluid" alt="">
               <ul>
                 <li>2 entretien avec le spécialiste orientation scolaire</li>
                 <li>1 test psychométrique</li>
@@ -338,28 +336,17 @@ if(!isset($_SESSION['nom'])){
 
 
 
-    <!-- ======= Team Section ======= -->
+   
     <section id="équipe" class="team">
-
       <div class="container">
-
         <header class="section-header">
-
           <p>Notre équipe</p>
         </header>
-
         <div class="row gy-4">
-
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="views/assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="views/assets/img/team/team-1.png" class="img-fluid" alt="">
               </div>
               <div class="member-info">
                 <h4>Mehdi Harit</h4>
@@ -370,17 +357,10 @@ if(!isset($_SESSION['nom'])){
               </div>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="views/assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="views/assets/img/team/team-2.png" class="img-fluid" alt="">
               </div>
               <div class="member-info">
                 <h4>Nadia Zitouni</h4>
@@ -389,17 +369,10 @@ if(!isset($_SESSION['nom'])){
               </div>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="views/assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="views/assets/img/team/team-3.png" class="img-fluid" alt="">
               </div>
               <div class="member-info">
                 <h4>William Anderson</h4>
@@ -411,17 +384,10 @@ if(!isset($_SESSION['nom'])){
               </div>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member">
               <div class="member-img">
-                <img src="views/assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="views/assets/img/team/team-4.png" class="img-fluid" alt="">
               </div>
               <div class="member-info">
                 <h4>Houda Mouhandiz</h4>
@@ -433,13 +399,9 @@ if(!isset($_SESSION['nom'])){
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- End Team Section -->
-
+    </section>
 
 
 
