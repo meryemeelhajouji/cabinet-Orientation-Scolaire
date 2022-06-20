@@ -22,24 +22,17 @@ Pour un étudiant :
 
 Pour admin :
 •	Gestion des étudiants :
-1.	Voir la List des étudiant (nom, prénom, email, phone, adresse, mot de passe, confirmation, orientation).
+1.	Voir la List des étudiant (nom, prénom, email, phone, adresse, mot de passe).
 2.	Supprimer étudiant
 3.	Modifier étudiant 
-4.	Confirme étudiant
 
-•	Gestion des rendez-vous
 
-1.	Voir la List de rendez-vous et envoyer un message de confirmation après la confirmation d’étudiant l’admin est assigne le rendez-vous a un charge d’orientation. (Tableau orientation « nom étudiant, confirmation, l’enseignement, date d’orientation).   
+•	Gestion de réservation des séances 
+
+1.	Voir la List de rendez-vous et use  confirmé après une appelle vocal entre l'admin et étudiant  
 2.	Supprimer rendez-vous
-3.	Modifier rendez-vous
-4.	Confirme-rendez-vous
-5.	Ajoute un rendez-vous
+3.	conirmé la réservation
 
-•	Gestion des charges d’orientation
-1.	Voir la List rendez-vous (nom, prénom, email, phone, adresse, type…)
-2.	Supprimer rendez-vous
-3.	Modifier rendez-vous 
-4.	Ajoute un rendez-vous
 
 
 •	Gestion des user
